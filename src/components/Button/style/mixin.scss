@@ -15,10 +15,18 @@
   $backgroundActive: yellow
 ) {
   @include button-color($color, $background, $background);
+  text-shadow: $btn-text-shadow;
+  box-shadow: $btn-primary-shadow;
+  &:hover,
+  &:focus {
+    @include button-color($color, $background, $background);
+  }
 }
 
 @mixin button-variant-other($color, $background, $border) {
   @include button-color($color, $background, $border);
+  text-shadow: $btn-text-shadow;
+  box-shadow: $btn-primary-shadow;
 }
 
 //Style for buttons
