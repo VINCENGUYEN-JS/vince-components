@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames";
-import "./Button.scss";
+import "./style/index.scss";
 
 type ButtonType = "default" | "primary" | "ghost" | "dashed" | "link" | "text";
 

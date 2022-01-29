@@ -5,9 +5,11 @@ $black: #000;
 $primary-color: #1890ff;
 
 // >>>Border Colors
-$border-color-base: dashed;
+$border-color-base: #d9d9d9;
 
 // >>> Button
+$btn-primary-color: #fff;
+$btn-primary-bg: $primary-color;
 $btn-default-color: rgba($black, 85%);
-$btn-default-pg: #fff;
+$btn-default-bg: #fff;
 $btn-default-border: $border-color-base;
