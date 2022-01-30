@@ -7,10 +7,14 @@
 @mixin button-size(
   $height,
   $padding-horizontal,
-  $padding-vertical,
   $font-size,
   $border-radius: $border-radius-base
 ) {
+  $padding-vertical: max(
+    (round((($height - $font-size * $line-height-base) / 2) * 10) / 10) -
+      $border-width-base,
+    0
+  );
   height: $height;
   padding: $padding-vertical $padding-horizontal;
   font-size: $font-size;
@@ -59,4 +63,65 @@
     $btn-default-border
   );
   border-style: dashed;
+}
+
+//Shape for buttons
+@mixin btn-round() {
+  @include button-size(
+    $btn-circle-size,
+    ($btn-circle-size / 2),
+    $font-size-base,
+    $btn-circle-size
+  );
+}
+
+//Base Style of btn
+@mixin btn() {
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  white-space: nowrap;
+  text-align: center;
+  background-image: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+  height: 32px;
+  padding: 4px 15px;
+  font-size: 14px;
+  border-radius: 2px;
+  &-sm {
+    @include button-size(
+      $btn-height-sm,
+      $btn-padding-horizontal-sm,
+      $btn-font-size-sm,
+      $btn-border-radius-sm
+    );
+  }
+  &-lg {
+    @include button-size(
+      $btn-height-lg,
+      $btn-padding-horizontal-lg,
+      $btn-font-size-lg,
+      $btn-border-radius-base
+    );
+  }
+}
+
+@mixin btn-primary {
+  @include button-primary();
+}
+
+@mixin btn-dash {
+  @include button-dash();
+}
+
+@mixin btn-round {
+  @include button-size(
+    $btn-circle-size,
+    $btn-circle-size/2,
+    $font-size-base,
+    $btn-circle-size
+  );
 }

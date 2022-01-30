@@ -1,43 +1,14 @@
-@use "../../../style/variable" as *;
 @use "./mixin.scss" as *;
 
 .button {
-  position: relative;
-  display: inline-block;
-  font-weight: 400;
-  white-space: nowrap;
-  text-align: center;
-  background-image: none;
-  border: 1px solid transparent;
-  cursor: pointer;
-  user-select: none;
-  touch-action: manipulation;
-  height: 32px;
-  padding: 4px 15px;
-  font-size: 14px;
-  border-radius: 2px;
+  @include btn();
   &-primary {
-    @include button-primary();
+    @include btn-primary();
   }
   &-dash {
-    @include button-dash();
+    @include btn-dash();
   }
-  &-sm {
-    @include button-size(
-      $btn-height-sm,
-      $btn-padding-horizontal-sm,
-      $btn-padding-vertical-sm,
-      $btn-font-size-sm,
-      $btn-border-radius-sm
-    );
-  }
-  &-lg {
-    @include button-size(
-      $btn-height-lg,
-      $btn-padding-horizontal-lg,
-      $btn-padding-vertical-lg,
-      $btn-font-size-lg,
-      $btn-border-radius-base
-    );
+  &-round {
+    @include btn-round();
   }
 }

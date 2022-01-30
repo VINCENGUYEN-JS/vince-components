@@ -8,6 +8,7 @@ $primary-color: #1890ff;
 
 // >>>Border Colors
 $border-color-base: #d9d9d9;
+$border-width-base: 1px;
 
 // >>>Height Rules
 $height-base: 32px;
@@ -24,6 +25,7 @@ $padding-xss: 4px; // more small
 // >>>Font-size , border
 $font-size-base: 14px;
 $font-size-lg: $font-size-base + 2px;
+$line-height-base: 1.5715;
 $border-radius-base: 2px;
 
 // >>> Button
@@ -48,5 +50,7 @@ $btn-font-size-sm: $font-size-base;
 $btn-padding-horizontal-base: $padding-md - 1px;
 $btn-padding-horizontal-sm: $padding-xs - 1px;
 $btn-padding-horizontal-lg: $btn-padding-horizontal-base;
-$btn-padding-vertical-sm: 0px;
-$btn-padding-vertical-lg: 6.4px;
+
+$btn-circle-size: $btn-height-base;
+$btn-circle-size-lg: $btn-height-lg;
+$btn-circle-size-sm: $btn-height-sm;

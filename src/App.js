@@ -7,8 +7,14 @@ function App() {
         Primary
       </Button>
       <br />
+      <br />
       <Button type="dash" size="small">
         Primary
+      </Button>
+      <br />
+      <br />
+      <Button type="primary" shape="round">
+        I'm Round
       </Button>
     </div>
   );
