@@ -1,3 +1,5 @@
+//Base Design System
+
 // >>>Error
 $black: #000;
 
@@ -7,9 +9,28 @@ $primary-color: #1890ff;
 // >>>Border Colors
 $border-color-base: #d9d9d9;
 
+// >>>Height Rules
+$height-base: 32px;
+$height-lg: 40px;
+$height-sm: 24px;
+
+// >>>Vertical paddings
+$padding-lg: 24px; //containers
+$padding-md: 16px; //small containers
+$padding-sm: 12px; // Form controls and items
+$padding-xs: 8px; // small items
+$padding-xss: 4px; // more small
+
+// >>>Font-size , border
+$font-size-base: 14px;
+$font-size-lg: $font-size-base + 2px;
+$border-radius-base: 2px;
+
 // >>> Button
 $btn-primary-color: #fff;
 $btn-primary-bg: $primary-color;
+$btn-border-radius-base: $border-radius-base;
+$btn-border-radius-sm: $border-radius-base;
 
 $btn-default-color: rgba($black, 85%);
 $btn-default-bg: #fff;
@@ -17,3 +38,15 @@ $btn-default-border: $border-color-base;
 
 $btn-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
 $btn-primary-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+
+$btn-height-base: $height-base;
+$btn-height-lg: $height-lg;
+$btn-height-sm: $height-sm;
+
+$btn-font-size-lg: $font-size-lg;
+$btn-font-size-sm: $font-size-base;
+$btn-padding-horizontal-base: $padding-md - 1px;
+$btn-padding-horizontal-sm: $padding-xs - 1px;
+$btn-padding-horizontal-lg: $btn-padding-horizontal-base;
+$btn-padding-vertical-sm: 0px;
+$btn-padding-vertical-lg: 6.4px;

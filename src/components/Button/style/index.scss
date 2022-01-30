@@ -1,3 +1,4 @@
+@use "../../../style/variable" as *;
 @use "./mixin.scss" as *;
 
 .button {
@@ -20,5 +21,23 @@
   }
   &-dash {
     @include button-dash();
+  }
+  &-sm {
+    @include button-size(
+      $btn-height-sm,
+      $btn-padding-horizontal-sm,
+      $btn-padding-vertical-sm,
+      $btn-font-size-sm,
+      $btn-border-radius-sm
+    );
+  }
+  &-lg {
+    @include button-size(
+      $btn-height-lg,
+      $btn-padding-horizontal-lg,
+      $btn-padding-vertical-lg,
+      $btn-font-size-lg,
+      $btn-border-radius-base
+    );
   }
 }

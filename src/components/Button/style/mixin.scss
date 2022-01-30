@@ -2,6 +2,23 @@
 
 //Base Btn mixins
 
+//Button Size
+
+@mixin button-size(
+  $height,
+  $padding-horizontal,
+  $padding-vertical,
+  $font-size,
+  $border-radius: $border-radius-base
+) {
+  height: $height;
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  border-radius: $border-radius;
+}
+
+//Button Color
+
 @mixin button-color($color, $background, $border) {
   color: $color;
   background-color: $background;
