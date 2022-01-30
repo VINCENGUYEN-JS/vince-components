@@ -124,4 +124,20 @@
     $font-size-base,
     $btn-circle-size
   );
+  &.button-lg {
+    @include button-size(
+      $btn-circle-size-lg,
+      $btn-circle-size-lg/2,
+      $btn-font-size-lg,
+      $btn-circle-size-lg
+    );
+  }
+  &.button-sm {
+    @include button-size(
+      $btn-circle-size-sm,
+      $btn-circle-size-sm/2,
+      $font-size-base,
+      $btn-circle-size-sm
+    );
+  }
 }

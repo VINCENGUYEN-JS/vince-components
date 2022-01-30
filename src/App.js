@@ -16,6 +16,11 @@ function App() {
       <Button type="primary" shape="round">
         I'm Round
       </Button>
+      <br />
+      <br />
+      <Button type="primary" shape="round" size="large">
+        I'm Round And Large
+      </Button>
     </div>
   );
 }
