@@ -11,4 +11,7 @@
   &-round {
     @include btn-round();
   }
+  &-circle {
+    @include btn-circle();
+  }
 }

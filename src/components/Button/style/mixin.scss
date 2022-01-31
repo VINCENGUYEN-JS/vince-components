@@ -141,3 +141,19 @@
     );
   }
 }
+
+@mixin btn-circle {
+  min-width: $btn-height-base;
+  padding-right: 0;
+  padding-left: 0;
+  text-align: center;
+  border-radius: 50%;
+  &.button-lg {
+    min-width: $btn-height-lg;
+    border-radius: 50%;
+  }
+  &.button-sm {
+    min-width: $btn-height-sm;
+    border-radius: 50%;
+  }
+}
