@@ -157,3 +157,7 @@
     border-radius: 50%;
   }
 }
+
+@mixin btn-icon {
+  margin-left: $margin-xs;
+}

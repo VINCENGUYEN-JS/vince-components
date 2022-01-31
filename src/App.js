@@ -1,4 +1,5 @@
 import Button from "./components/Button/Button.tsx";
+import { DownloadOutlined } from "@ant-design/icons";
 
 function App() {
   return (
@@ -25,6 +26,16 @@ function App() {
       <br />
       <Button type="primary" shape="circle" size="large">
         I'm Circle And Large
+      </Button>
+      <br />
+      <br />
+      <Button
+        type="primary"
+        icon={<DownloadOutlined />}
+        shape="round"
+        size="large"
+      >
+        Download
       </Button>
     </div>
   );

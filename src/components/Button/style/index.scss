@@ -14,4 +14,7 @@
   &-circle {
     @include btn-circle();
   }
+  > .anticon + span {
+    @include btn-icon();
+  }
 }

@@ -13,6 +13,7 @@ type BaseButtonProps = {
   shape?: ButtonShape;
   size?: SizeType;
   onClick: () => void;
+  icon?: React.ReactNode;
   children: React.ReactNode;
 };
 
@@ -24,6 +25,7 @@ const Button = (props: BaseButtonProps) => {
   const {
     type,
     children,
+    icon,
     onClick,
     size: customizeSize,
     shape = "default",
@@ -34,9 +36,11 @@ const Button = (props: BaseButtonProps) => {
     [`${prefixCls}-${sizeCls}`]: sizeCls,
     [`${prefixCls}-${shape}`]: shape !== "default" && shape,
   });
+
   return (
     <button className={classes} onClick={onClick}>
-      {children}
+      {icon}
+      <span>{children}</span>
     </button>
   );
 };
