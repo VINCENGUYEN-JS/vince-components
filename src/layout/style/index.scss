@@ -1,0 +1,8 @@
+@use "./mixin.scss" as *;
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+@include make-grid();
