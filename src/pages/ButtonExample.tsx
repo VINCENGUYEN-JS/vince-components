@@ -4,7 +4,7 @@ import { DownloadOutlined } from "@ant-design/icons";
 import Button from "../components/Button/Button";
 
 const ButtonExample = () => (
-  <>
+  <div style={{ marginTop: "20px" }}>
     <Button type="primary" size="large">
       Primary
     </Button>
@@ -38,7 +38,7 @@ const ButtonExample = () => (
     >
       Download
     </Button>{" "}
-  </>
+  </div>
 );
 
 export default ButtonExample;
