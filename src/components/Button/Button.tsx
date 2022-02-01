@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import classNames from "classnames";
 import "./style/index.scss";
 
@@ -14,7 +14,6 @@ type BaseButtonProps = {
   type: ButtonType;
   shape?: ButtonShape;
   size?: SizeType;
-  onClick: () => void;
   icon?: React.ReactNode;
   children: React.ReactNode;
 };
