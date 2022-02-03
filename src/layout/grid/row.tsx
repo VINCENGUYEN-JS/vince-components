@@ -4,7 +4,7 @@ import classNames from "classnames";
 import ResponsiveObserve, {
   ScreenMap,
   Breakpoint,
-} from "../utils/responsiveObserve";
+} from "../../utils/responsiveObserve";
 import "./style/index.scss";
 
 interface RowContextState {
