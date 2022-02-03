@@ -46,6 +46,15 @@ const LayoutExample = () => (
         <BorderBox>50%</BorderBox>
       </Col>
     </Row>
+    <Divider>Layout with responsive gutter</Divider>
+    <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+      <Col span={12}>
+        <BorderBox>50%</BorderBox>
+      </Col>
+      <Col span={12}>
+        <BorderBox>50%</BorderBox>
+      </Col>
+    </Row>
   </>
 );
 

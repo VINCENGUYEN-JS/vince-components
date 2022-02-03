@@ -1,6 +1,10 @@
 import * as React from "react";
 import classNames from "classnames";
 
+import ResponsiveObserve, {
+  ScreenMap,
+  Breakpoint,
+} from "../utils/responsiveObserve";
 import "./style/index.scss";
 
 interface RowContextState {
@@ -15,18 +19,51 @@ const prefixCls = "row";
 
 type RowProps = {
   children: React.ReactNode;
-  gutter?: number;
+  gutter?: number | Partial<Record<Breakpoint, number>>;
 };
 
 const Row = (props: RowProps) => {
   const { children, gutter = 0 } = props;
+
+  const [screens, setScreens] = React.useState<ScreenMap>({
+    xs: true,
+    sm: true,
+    md: true,
+    lg: true,
+    xl: true,
+    xxl: true,
+  });
+
+  React.useEffect(() => {
+    ResponsiveObserve.subscribe((screen) => {
+      setScreens(screen);
+    });
+  }, []);
+
+  const getGutter = React.useCallback((): number => {
+    let result = 0;
+    if (typeof gutter === "number") {
+      return gutter;
+    }
+
+    if (typeof gutter === "object") {
+      Object.keys(screens).forEach((breakpoint: Breakpoint) => {
+        if (gutter[breakpoint] !== undefined && screens[breakpoint]) {
+          result = gutter[breakpoint] as number;
+        }
+      });
+    }
+
+    return result;
+  }, [screens, gutter]);
+
   const classes = classNames(prefixCls, {});
 
   const rowContext = React.useMemo(
     () => ({
-      gutter: gutter,
+      gutter: getGutter(),
     }),
-    [gutter]
+    [getGutter]
   );
   return (
     <RowContext.Provider value={rowContext}>
