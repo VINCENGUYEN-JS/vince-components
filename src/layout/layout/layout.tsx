@@ -25,7 +25,7 @@ type LayoutContextProps = {
   };
 };
 
-const LayoutContext = React.createContext<LayoutContextProps>(
+export const LayoutContext = React.createContext<LayoutContextProps>(
   {} as LayoutContextProps
 );
 

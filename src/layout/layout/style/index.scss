@@ -10,6 +10,9 @@
   &-footer {
     flex: 0 0 auto;
   }
+  &#{&}-has-sider {
+    flex-direction: row;
+  }
   &-header {
     height: $layout-header-height;
     padding: $layout-header-padding;
@@ -27,5 +30,10 @@
     flex: auto;
     /* fix firefox can't set height smaller than content on flex item */
     min-height: 0;
+  }
+  &-sider {
+    &-children {
+      height: 100%;
+    }
   }
 }
