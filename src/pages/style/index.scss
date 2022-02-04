@@ -1,0 +1,34 @@
+.code-box-demo {
+  text-align: center;
+}
+.layout-header,
+.layout-footer {
+  color: #fff;
+  background: #7dbcea;
+}
+[data-theme="dark"] .layout-header {
+  background: #6aa0c7;
+}
+[data-theme="dark"] .layout-footer {
+  background: #6aa0c7;
+}
+.layout-footer {
+  line-height: 1.5;
+}
+.layout-sider {
+  color: #fff;
+  line-height: 120px;
+  background: #3ba0e9;
+}
+[data-theme="dark"] .layout-sider {
+  background: #3499ec;
+}
+.layout-content {
+  min-height: 120px;
+  color: #fff;
+  line-height: 120px;
+  background: rgba(16, 142, 233, 1);
+}
+[data-theme="dark"] .ant-layout-content {
+  background: #107bcb;
+}

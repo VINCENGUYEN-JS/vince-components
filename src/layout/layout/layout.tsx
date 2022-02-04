@@ -1,13 +1,15 @@
 import * as React from "react";
 import classNames from "classnames";
 
+import "./style/index.scss";
+
 type GeneratorProps = {
   prefixCls: string;
   tagName: "header" | "footer" | "main" | "section";
   displayName: string;
 };
 
-interface BasicProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface BasicProps extends React.HTMLAttributes<HTMLDivElement> {
   prefixCls?: string;
   hasSider?: boolean;
 }

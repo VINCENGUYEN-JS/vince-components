@@ -12,6 +12,7 @@ $border-width-base: 1px;
 
 // >>>Background colors
 $heading-color: rgba($black, 85%);
+$text-color:rgba($black, 85%);
 
 // >>>Height Rules
 $height-base: 32px;
@@ -67,3 +68,13 @@ $btn-circle-size-sm: $btn-height-sm;
 
 // >>>Grid systems
 $grid-columns: 24;
+
+// >>>Layout
+$layout-body-background: #f0f2f5;
+$layout-header-background: #001529;
+$layout-header-height: 64px;
+$layout-header-padding: 0 50px;
+$layout-header-color: $text-color;
+$layout-footer-padding: 24px 50px;
+$layout-footer-background: $layout-body-background;
+$layout-sider-background: $layout-header-background;
