@@ -7,15 +7,25 @@ type GeneratorProps = {
   displayName: string;
 };
 
-type BasicProps = {
+interface BasicProps extends React.HTMLAttributes<HTMLDivElement> {
   prefixCls?: string;
   hasSider?: boolean;
-  children: React.ReactNode;
-};
+}
 
 type BasicPropsWithTagName = BasicProps & {
   tagName: "header" | "footer" | "main" | "section";
 };
+
+type LayoutContextProps = {
+  siderHook: {
+    addSider: (id: string) => void;
+    removeSider: (id: string) => void;
+  };
+};
+
+const LayoutContext = React.createContext<LayoutContextProps>(
+  {} as LayoutContextProps
+);
 
 const generator =
   ({ prefixCls, tagName, displayName }: GeneratorProps) =>
@@ -29,13 +39,44 @@ const generator =
     return Adapter;
   };
 
+/**Layout components */
+
+const Basic = (props: BasicPropsWithTagName) => {
+  const { prefixCls, children, tagName, className, ...other } = props;
+  const classes = classNames(prefixCls, className);
+  return React.createElement(
+    tagName,
+    { className: classes, ...other },
+    children
+  );
+};
+
 const BasicLayout = (props: BasicPropsWithTagName) => {
   const { tagName: Tag, children, hasSider, prefixCls, ...others } = props;
-  const classes = classNames(prefixCls, {});
+  const [siders, setSiders] = React.useState<string[]>([]);
+  const classes = classNames(prefixCls, {
+    [`${prefixCls}-has-sider`]:
+      typeof hasSider === "boolean" ? hasSider : siders.length > 0,
+  });
+  const contextValue = React.useMemo(
+    () => ({
+      siderHook: {
+        addSider: (id: string) => {
+          setSiders((prev) => [...prev, id]);
+        },
+        removeSider: (id: string) => {
+          setSiders((prev) => prev.filter((item) => item !== id));
+        },
+      },
+    }),
+    []
+  );
   return (
-    <Tag className={classes} {...others}>
-      {children}
-    </Tag>
+    <LayoutContext.Provider value={contextValue}>
+      <Tag className={classes} {...others}>
+        {children}
+      </Tag>
+    </LayoutContext.Provider>
   );
 };
 
@@ -44,5 +85,25 @@ const Layout = generator({
   tagName: "section",
   displayName: "Layout",
 })(BasicLayout);
+
+const Header = generator({
+  prefixCls: "layout-header",
+  tagName: "header",
+  displayName: "Header",
+})(Basic);
+
+const Footer = generator({
+  prefixCls: "layout-footer",
+  tagName: "footer",
+  displayName: "Footer",
+})(Basic);
+
+const Content = generator({
+  prefixCls: "layout-content",
+  tagName: "main",
+  displayName: "Content",
+})(Basic);
+
+export { Header, Footer, Content };
 
 export default Layout;
