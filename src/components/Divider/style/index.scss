@@ -32,4 +32,14 @@ $divider-color: rgba(0, 0, 0, 6%);
       content: "";
     }
   }
+  &-horizontal#{&}-with-text-left {
+    &::before {
+      top: 50%;
+      width: $divider-orientation-margin;
+    }
+    &::after {
+      top: 50%;
+      width: 100% - $divider-orientation-margin;
+    }
+  }
 }
