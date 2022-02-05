@@ -7,6 +7,7 @@ import {
   DividerExample,
   GridExample,
   LayoutExample,
+  MenuExample,
 } from "./pages";
 
 const Nav = () => (
@@ -15,6 +16,7 @@ const Nav = () => (
     <Link to="/divider">Divider</Link>
     <Link to="/grid">Grid</Link>
     <Link to="/layout">Layout</Link>
+    <Link to="/menu">Menu</Link>
   </div>
 );
 
@@ -31,6 +33,7 @@ function App() {
             <Route path="/divider" element={<DividerExample />} />
             <Route path="/grid" element={<GridExample />} />
             <Route path="/layout" element={<LayoutExample />} />
+            <Route path="/menu" element={<MenuExample />} />
           </Routes>
         </Layout.Content>
       </Layout>
