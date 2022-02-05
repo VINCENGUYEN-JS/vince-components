@@ -12,6 +12,13 @@ code {
     monospace;
 }
 
+a {
+  color: #fff;
+  &:hover {
+    color: #00f;
+  }
+}
+
 *,
 *::before,
 *::after {

@@ -56,10 +56,6 @@ const Basic = (props: BasicPropsWithTagName) => {
 const BasicLayout = (props: BasicPropsWithTagName) => {
   const { tagName: Tag, children, hasSider, prefixCls, ...others } = props;
   const [siders, setSiders] = React.useState<string[]>([]);
-  const classes = classNames(prefixCls, {
-    [`${prefixCls}-has-sider`]:
-      typeof hasSider === "boolean" ? hasSider : siders.length > 0,
-  });
   const contextValue = React.useMemo(
     () => ({
       siderHook: {
@@ -73,6 +69,12 @@ const BasicLayout = (props: BasicPropsWithTagName) => {
     }),
     []
   );
+
+  const classes = classNames(prefixCls, {
+    [`${prefixCls}-has-sider`]:
+      typeof hasSider === "boolean" ? hasSider : siders.length > 0,
+  });
+
   return (
     <LayoutContext.Provider value={contextValue}>
       <Tag className={classes} {...others}>

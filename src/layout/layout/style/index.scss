@@ -32,6 +32,7 @@
     min-height: 0;
   }
   &-sider {
+    background: $layout-sider-background;
     &-children {
       height: 100%;
     }
