@@ -1,12 +1,22 @@
 import * as React from "react";
+import classNames from "classnames";
 
-type MenuProps = {
+import "./style/index.scss";
+
+interface MenuProps extends React.HTMLAttributes<HTMLUListElement> {
   children: React.ReactNode;
-};
+}
+
+const prefixCls = "menu";
 
 const Menu = (props: MenuProps) => {
-  const { children } = props;
-  return <ul>{children}</ul>;
+  const { children, style: customStyle } = props;
+  const classes = classNames(prefixCls, {});
+  return (
+    <ul className={classes} style={customStyle}>
+      {children}
+    </ul>
+  );
 };
 
 export default Menu;
