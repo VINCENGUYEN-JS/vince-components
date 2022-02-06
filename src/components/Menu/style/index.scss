@@ -30,6 +30,16 @@
     }
   }
 
+  &-item-selected {
+    background-color: $menu-item-active-bg;
+    color: $menu-highlight-color;
+
+    a,
+    a:hover {
+      color: $menu-highlight-color;
+    }
+  }
+
   &-item-group-list {
     margin: 0;
     padding: 0;

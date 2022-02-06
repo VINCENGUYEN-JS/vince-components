@@ -12,23 +12,23 @@ import {
 } from "./pages";
 
 const Nav = () => (
-  <Menu>
+  <Menu key="1">
     <MenuItemGroup title="components">
-      <MenuItem>
+      <MenuItem key="11">
         <Link to="/button">Button</Link>
       </MenuItem>
-      <MenuItem>
+      <MenuItem key="12">
         <Link to="/divider">Divider</Link>
       </MenuItem>
-      <MenuItem>
+      <MenuItem key="13">
         <Link to="/menu">Menu</Link>
       </MenuItem>
     </MenuItemGroup>
     <MenuItemGroup title="layouts">
-      <MenuItem>
+      <MenuItem key="21">
         <Link to="/grid">Grid</Link>
       </MenuItem>
-      <MenuItem>
+      <MenuItem key="22">
         <Link to="/layout">Layout</Link>
       </MenuItem>
     </MenuItemGroup>

@@ -3,6 +3,9 @@
 // >>>Error
 $black: #000;
 
+// >>> Color used by default
+$primary-1: #e6f7ff;
+
 // >>>Main Colors
 $primary-color: #1890ff;
 
@@ -12,7 +15,7 @@ $border-width-base: 1px;
 
 // >>>Background colors
 $heading-color: rgba($black, 85%);
-$text-color:rgba($black, 85%);
+$text-color: rgba($black, 85%);
 
 // >>>Height Rules
 $height-base: 32px;
@@ -78,6 +81,7 @@ $grid-columns: 24;
 // >>>Menu
 $menu-item-color: $text-color;
 $menu-highlight-color: $primary-color;
+$menu-item-active-bg: $primary-1;
 
 // >>>Layout
 $layout-body-background: #f0f2f5;
