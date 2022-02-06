@@ -8,7 +8,7 @@ const menuStyle = {
 };
 
 const MenuExample = () => (
-  <div style={{ margin: "20px" }}>
+  <div>
     <Menu style={menuStyle}>
       <MenuItem>1</MenuItem>
       <MenuItem>2-1</MenuItem>

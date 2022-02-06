@@ -40,17 +40,19 @@ function App() {
     <div>
       <Layout>
         <Layout style={{ minHeight: "100vh" }}>
-          <Layout.Sider>
+          <Layout.Sider style={{ background: "#fff" }}>
             <Nav />
           </Layout.Sider>
           <Layout.Content>
-            <Routes>
-              <Route path="/button" element={<ButtonExample />} />
-              <Route path="/divider" element={<DividerExample />} />
-              <Route path="/grid" element={<GridExample />} />
-              <Route path="/layout" element={<LayoutExample />} />
-              <Route path="/menu" element={<MenuExample />} />
-            </Routes>
+            <div style={{ paddingLeft: "64px" }}>
+              <Routes>
+                <Route path="/button" element={<ButtonExample />} />
+                <Route path="/divider" element={<DividerExample />} />
+                <Route path="/grid" element={<GridExample />} />
+                <Route path="/layout" element={<LayoutExample />} />
+                <Route path="/menu" element={<MenuExample />} />
+              </Routes>
+            </div>
           </Layout.Content>
         </Layout>
         <Layout.Footer>Vince Nguyen</Layout.Footer>

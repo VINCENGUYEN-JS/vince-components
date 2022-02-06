@@ -7,6 +7,8 @@ import { LayoutContext } from "./layout";
 type SiderProps = {
   children: React.ReactNode;
   width?: number | string;
+  className?: string;
+  style?: React.CSSProperties;
 };
 
 const generateId = (() => {
@@ -20,7 +22,7 @@ const generateId = (() => {
 const prefixCls = "layout-sider";
 
 const Sider = (props: SiderProps) => {
-  const { children, width = "200px" } = props;
+  const { children, width = "200px", className, style } = props;
   const siderWidth = width;
   const { siderHook } = useContext(LayoutContext);
   useEffect(() => {
@@ -29,7 +31,7 @@ const Sider = (props: SiderProps) => {
     return () => siderHook.removeSider(uniqueId);
   }, []);
   const renderSider = () => {
-    const siderCls = classNames(prefixCls, {});
+    const siderCls = classNames(prefixCls, className, {});
     const divStyle = {
       flex: `0 0 ${siderWidth}`,
       maxWidth: siderWidth,
@@ -37,7 +39,7 @@ const Sider = (props: SiderProps) => {
       width: siderWidth,
     };
     return (
-      <aside className={siderCls} style={divStyle}>
+      <aside className={siderCls} style={{ ...divStyle, ...style }}>
         <div className={`${prefixCls}-children`}>{children}</div>
       </aside>
     );
