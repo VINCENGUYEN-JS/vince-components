@@ -2,7 +2,14 @@ import * as React from "react";
 import classNames from "classnames";
 import "./style/index.scss";
 
-type ButtonType = "default" | "primary" | "ghost" | "dashed" | "link" | "text";
+type ButtonType =
+  | "default"
+  | "primary"
+  | "ghost"
+  | "dashed"
+  | "link"
+  | "text"
+  | undefined;
 
 type SizeType = "small" | "middle" | "large" | undefined;
 

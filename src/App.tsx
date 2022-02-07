@@ -9,6 +9,7 @@ import {
   GridExample,
   LayoutExample,
   MenuExample,
+  InputExample,
 } from "./pages";
 
 const SideBar = () => (
@@ -22,6 +23,9 @@ const SideBar = () => (
       </MenuItem>
       <MenuItem key="13">
         <Link to="/menu">Menu</Link>
+      </MenuItem>
+      <MenuItem key="14">
+        <Link to="/input">Input</Link>
       </MenuItem>
     </MenuItemGroup>
     <MenuItemGroup title="layouts">
@@ -60,6 +64,7 @@ function App() {
                 <Route path="/grid" element={<GridExample />} />
                 <Route path="/layout" element={<LayoutExample />} />
                 <Route path="/menu" element={<MenuExample />} />
+                <Route path="/input" element={<InputExample />} />
               </Routes>
             </div>
           </Layout.Content>
