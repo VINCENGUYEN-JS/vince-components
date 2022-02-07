@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 
-import { Layout } from "./layout/index";
+import { Layout, Row, Col } from "./layout";
 import Menu, { MenuItem, MenuItemGroup } from "./components/Menu";
 import {
   ButtonExample,
@@ -11,8 +11,8 @@ import {
   MenuExample,
 } from "./pages";
 
-const Nav = () => (
-  <Menu key="1">
+const SideBar = () => (
+  <Menu>
     <MenuItemGroup title="components">
       <MenuItem key="11">
         <Link to="/button">Button</Link>
@@ -35,13 +35,22 @@ const Nav = () => (
   </Menu>
 );
 
+const Nav = () => (
+  <Row>
+    <Col span={4}>Vince's Design</Col>
+    <Col span={20}>Rest</Col>
+  </Row>
+);
 function App() {
   return (
     <div>
       <Layout>
-        <Layout style={{ minHeight: "100vh" }}>
+        <Layout.Header id="header">
+          <Nav />
+        </Layout.Header>
+        <Layout style={{ minHeight: "100vh", padding: "40px 0 0" }}>
           <Layout.Sider style={{ background: "#fff" }}>
-            <Nav />
+            <SideBar />
           </Layout.Sider>
           <Layout.Content>
             <div style={{ paddingLeft: "64px" }}>

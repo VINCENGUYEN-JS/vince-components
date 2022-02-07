@@ -6,6 +6,12 @@ import "./style/index.scss";
 interface MenuProps extends React.HTMLAttributes<HTMLUListElement> {
   children: React.ReactNode;
   key?: string;
+  mode?:
+    | "vertical"
+    | "vertical-left"
+    | "vertical-right"
+    | "horizontal"
+    | "inline";
 }
 
 interface MenuInfo {
@@ -25,7 +31,7 @@ export const MenuContext = React.createContext<MenuContextProps>(
 const prefixCls = "menu";
 
 const Menu = (props: MenuProps) => {
-  const { children, style: customStyle } = props;
+  const { children, style: customStyle, mode = "inline" } = props;
   const [selectedKeys, setSeletedKeys] = React.useState<string[]>([]);
 
   const onInternalClick = (info: MenuInfo) => {
@@ -43,7 +49,9 @@ const Menu = (props: MenuProps) => {
     };
   }, [selectedKeys]);
 
-  const classes = classNames(prefixCls, {});
+  const classes = classNames(prefixCls, {
+    [`${prefixCls}-${mode}`]: mode,
+  });
   return (
     <MenuContext.Provider value={contextValues}>
       <ul className={classes} style={customStyle}>

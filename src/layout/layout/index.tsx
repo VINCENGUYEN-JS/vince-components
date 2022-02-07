@@ -9,6 +9,9 @@ interface LayoutComposition extends React.FC<BasicProps> {
 }
 
 const Layout = InternalLayout as LayoutComposition;
+
+/**Assign props later */
+
 Layout.Content = Content;
 Layout.Header = Header;
 Layout.Footer = Footer;
