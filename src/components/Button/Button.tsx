@@ -49,9 +49,11 @@ const Button = React.forwardRef<HTMLButtonElement, NativeButtonProps>(
       ...rest
     } = props;
     const sizeCls = customizeSize ? sizeClassNameMap[customizeSize] : "";
+    const iconType = icon;
     const classes = classNames(prefixCls, {
       [`${prefixCls}-${type}`]: type,
       [`${prefixCls}-${sizeCls}`]: sizeCls,
+      [`${prefixCls}-icon-only`]: !children && children !== 0 && !!iconType,
       [`${prefixCls}-${shape}`]: shape !== "default" && shape,
     });
 

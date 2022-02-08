@@ -17,4 +17,7 @@
   > .anticon + span {
     @include btn-icon();
   }
+  &-icon-only {
+    @include btn-square();
+  }
 }

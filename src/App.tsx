@@ -52,7 +52,13 @@ function App() {
         <Layout.Header id="header">
           <Nav />
         </Layout.Header>
-        <Layout style={{ minHeight: "100vh", padding: "40px 0 0" }}>
+        <Layout
+          style={{
+            minHeight: "100vh",
+            padding: "40px 0 0",
+            background: "#fff",
+          }}
+        >
           <Layout.Sider style={{ background: "#fff" }}>
             <SideBar />
           </Layout.Sider>

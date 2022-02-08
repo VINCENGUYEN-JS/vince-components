@@ -9,6 +9,8 @@ interface SearchProps extends InputProps {
   enterButton?: React.ReactNode;
 }
 
+const prefixCls = "input-search";
+
 const Search = (props: SearchProps) => {
   const { onSearch, enterButton = false, ...rest } = props;
   const searchIcon =
@@ -18,7 +20,7 @@ const Search = (props: SearchProps) => {
       {enterButton}
     </Button>
   );
-  return <Input {...rest} addonAfter={button} />;
+  return <Input className={prefixCls} {...rest} addonAfter={button} />;
 };
 
 export default Search;

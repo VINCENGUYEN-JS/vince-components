@@ -1,0 +1,9 @@
+@use "../../../style/variable.scss" as *;
+@use "./mixin.scss" as *;
+
+.input {
+  @include input();
+  &-group {
+    @include input-group();
+  }
+}
