@@ -5,5 +5,11 @@
   @include input();
   &-group {
     @include input-group();
+    &-wrapper {
+      display: inline-block;
+      width: 100%;
+      text-align: start;
+      vertical-align: top;
+    }
   }
 }

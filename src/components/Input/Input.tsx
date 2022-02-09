@@ -12,16 +12,22 @@ const prefixCls = "input";
 
 const Input = (props: InputProps) => {
   const { addonAfter, className, ...otherProps } = props;
-  const addonAfterNode = addonAfter ? <span>{addonAfter}</span> : null;
 
   const wrapperClassName = `${prefixCls}-group`;
+  const addnClassName = `${wrapperClassName}-addon`;
+  const groupClassName = `${prefixCls}-group-wrapper`;
+
   const mergedWrapperClassName = classNames(
     `${prefixCls}-wrapper`,
     wrapperClassName
   );
 
+  const addonAfterNode = addonAfter ? (
+    <span className={addnClassName}>{addonAfter}</span>
+  ) : null;
+
   return (
-    <span className={className}>
+    <span className={groupClassName}>
       <span className={mergedWrapperClassName}>
         <input className={prefixCls} {...otherProps} />
         {addonAfterNode}

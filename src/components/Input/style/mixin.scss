@@ -20,4 +20,8 @@
   position: relative;
   display: table;
   width: 100%;
+  &-addon,
+  > .input {
+    display: table-cell;
+  }
 }
