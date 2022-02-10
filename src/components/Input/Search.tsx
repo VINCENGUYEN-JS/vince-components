@@ -12,15 +12,27 @@ interface SearchProps extends InputProps {
 const prefixCls = "input-search";
 
 const Search = (props: SearchProps) => {
-  const { onSearch, enterButton = false, ...rest } = props;
+  const { onSearch: customOnSearch, enterButton = false, ...rest } = props;
   const searchIcon =
     typeof enterButton === "boolean" ? <SearchOutlined /> : null;
+  const onSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (customOnSearch) {
+      customOnSearch((e.target as HTMLInputElement).value, e);
+    }
+  };
   const button = (
     <Button type={enterButton ? "primary" : undefined} icon={searchIcon}>
       {enterButton}
     </Button>
   );
-  return <Input className={prefixCls} {...rest} addonAfter={button} />;
+  return (
+    <Input
+      className={prefixCls}
+      onPressEnter={onSearch}
+      {...rest}
+      addonAfter={button}
+    />
+  );
 };
 
 export default Search;

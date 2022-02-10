@@ -8,6 +8,7 @@ import {
   LayoutExample,
   MenuExample,
   InputExample,
+  OverviewExample,
 } from "./pages";
 
 export interface CustomRouteObject extends RouteObject {
@@ -15,6 +16,11 @@ export interface CustomRouteObject extends RouteObject {
 }
 
 const routes: CustomRouteObject[] = [
+  {
+    key: "overview",
+    path: "/overview",
+    element: <OverviewExample />,
+  },
   {
     key: "button",
     path: "/button",

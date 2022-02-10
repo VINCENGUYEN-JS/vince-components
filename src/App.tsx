@@ -1,5 +1,12 @@
 import * as React from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  Link,
+  useNavigate,
+  useLocation,
+  Navigate,
+} from "react-router-dom";
 
 import { Layout, Row, Col } from "./layout";
 import routes, { CustomRouteObject } from "./routes";
@@ -30,6 +37,9 @@ const SideBar = (props: { appRoutes: CustomRouteObject[] }) => {
   const selectedRoute = filterFn(appRoutes);
   return (
     <Menu>
+      <MenuItem>
+        <Link to="/overview"> Overview</Link>
+      </MenuItem>
       <MenuItemGroup title={componentTitle}>
         {selectedRoute(componentTitle).map((route) => (
           <MenuItem key={String(itemKeyForComponent++)}>
@@ -49,6 +59,7 @@ const SideBar = (props: { appRoutes: CustomRouteObject[] }) => {
 };
 
 const Nav = (props: NavProps) => {
+  const navigate = useNavigate();
   const { userSearch, setUserSearch } = props;
   return (
     <Row>
@@ -61,10 +72,23 @@ const Nav = (props: NavProps) => {
               const userSearchText = (e.target as HTMLInputElement).value;
               setUserSearch(userSearchText);
             }}
+            onSearch={(value) => navigate(value)}
           />
         </>
       </Col>
     </Row>
+  );
+};
+
+const NoMatch = () => {
+  let location = useLocation();
+
+  return (
+    <div>
+      <h3>
+        No match for <code>{location.pathname}</code>
+      </h3>
+    </div>
   );
 };
 function App() {
@@ -83,7 +107,6 @@ function App() {
     setAppRoutes(userSearchRoute);
   }, [userSearch]);
 
-  console.log({ appRoutes, userSearch });
   return (
     <div>
       <Layout>
@@ -103,9 +126,11 @@ function App() {
           <Layout.Content>
             <div style={{ paddingLeft: "64px" }}>
               <Routes>
+                <Route path="/" element={<Navigate to="/overview" />} />
                 {appRoutes.map((route) => (
                   <Route path={route.path} element={route.element} />
                 ))}
+                <Route path="*" element={<NoMatch />} />
               </Routes>
             </div>
           </Layout.Content>

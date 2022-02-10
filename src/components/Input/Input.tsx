@@ -6,12 +6,14 @@ import "./style/index.scss";
 export interface InputProps extends React.HTMLAttributes<HTMLInputElement> {
   type?: "search";
   addonAfter?: React.ReactNode;
+  onPressEnter?: React.KeyboardEventHandler<HTMLInputElement>;
 }
 
 const prefixCls = "input";
 
 const Input = (props: InputProps) => {
-  const { addonAfter, className, onChange, ...otherProps } = props;
+  const { addonAfter, className, onChange, onPressEnter, ...otherProps } =
+    props;
 
   const wrapperClassName = `${prefixCls}-group`;
   const addnClassName = `${wrapperClassName}-addon`;
@@ -33,10 +35,20 @@ const Input = (props: InputProps) => {
     onChange(e);
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (onPressEnter && e.key === "Enter") {
+      onPressEnter(e);
+    }
+  };
   return (
     <span className={groupClassName}>
       <span className={mergedWrapperClassName}>
-        <input className={prefixCls} onChange={handleChange} {...otherProps} />
+        <input
+          className={prefixCls}
+          onChange={handleChange}
+          onKeyDown={handleKeyDown}
+          {...otherProps}
+        />
         {addonAfterNode}
       </span>
     </span>
