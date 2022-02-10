@@ -2,6 +2,8 @@
 
 .button {
   @include btn();
+  @include btn-default();
+  
   &-primary {
     @include btn-primary();
   }

@@ -11,7 +11,7 @@ export interface InputProps extends React.HTMLAttributes<HTMLInputElement> {
 const prefixCls = "input";
 
 const Input = (props: InputProps) => {
-  const { addonAfter, className, ...otherProps } = props;
+  const { addonAfter, className, onChange, ...otherProps } = props;
 
   const wrapperClassName = `${prefixCls}-group`;
   const addnClassName = `${wrapperClassName}-addon`;
@@ -26,10 +26,17 @@ const Input = (props: InputProps) => {
     <span className={addnClassName}>{addonAfter}</span>
   ) : null;
 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (!onChange) {
+      return;
+    }
+    onChange(e);
+  };
+
   return (
     <span className={groupClassName}>
       <span className={mergedWrapperClassName}>
-        <input className={prefixCls} {...otherProps} />
+        <input className={prefixCls} onChange={handleChange} {...otherProps} />
         {addonAfterNode}
       </span>
     </span>
