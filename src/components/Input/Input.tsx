@@ -19,6 +19,8 @@ const Input = (props: InputProps) => {
   const addnClassName = `${wrapperClassName}-addon`;
   const groupClassName = `${prefixCls}-group-wrapper`;
 
+  const mergedGroupClassName = classNames(groupClassName, className);
+
   const mergedWrapperClassName = classNames(
     `${prefixCls}-wrapper`,
     wrapperClassName
@@ -41,7 +43,7 @@ const Input = (props: InputProps) => {
     }
   };
   return (
-    <span className={groupClassName}>
+    <span className={mergedGroupClassName}>
       <span className={mergedWrapperClassName}>
         <input
           className={prefixCls}

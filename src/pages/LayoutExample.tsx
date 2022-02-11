@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { Layout } from "../layout";
 import Divider from "../components/Divider/Divider";
-import "./style/index.scss";
+
 
 const LayoutExample = () => (
   <div className="layout-example">

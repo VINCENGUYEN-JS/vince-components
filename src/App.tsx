@@ -12,6 +12,7 @@ import { Layout, Row, Col } from "./layout";
 import routes, { CustomRouteObject } from "./routes";
 import Menu, { MenuItem, MenuItemGroup } from "./components/Menu";
 import Input from "./components/Input";
+import "./pages/style/index.scss";
 
 type NavProps = {
   userSearch: string;
