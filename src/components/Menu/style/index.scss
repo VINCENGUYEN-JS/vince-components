@@ -56,4 +56,20 @@
   &-inline {
     border-right: 1px solid #f0f0f0;
   }
+
+  &-horizontal {
+    > .menu-item {
+      display: inline-block;
+    }
+    > .menu-item-selected:after {
+      position: absolute;
+      right: 20px;
+      bottom: 0;
+      left: 20px;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      content: "";
+      border-bottom: 2px solid #1890ff;
+    }
+  }
 }

@@ -1,6 +1,7 @@
 import * as React from "react";
 import classNames from "classnames";
 
+import { parseChildren } from "../../utils/nodeUtil";
 import "./style/index.scss";
 
 interface MenuProps extends React.HTMLAttributes<HTMLUListElement> {
@@ -31,8 +32,10 @@ export const MenuContext = React.createContext<MenuContextProps>(
 const prefixCls = "menu";
 
 const Menu = (props: MenuProps) => {
-  const { children, style: customStyle, mode = "inline" } = props;
+  const { children, style: customStyle, mode = "vertical" } = props;
   const [selectedKeys, setSeletedKeys] = React.useState<string[]>([]);
+
+  const childList: React.ReactElement[] = parseChildren(children, []);
 
   const onInternalClick = (info: MenuInfo) => {
     const { key, domEvent } = info;
@@ -55,7 +58,7 @@ const Menu = (props: MenuProps) => {
   return (
     <MenuContext.Provider value={contextValues}>
       <ul className={classes} style={customStyle}>
-        {children}
+        {childList}
       </ul>
     </MenuContext.Provider>
   );
