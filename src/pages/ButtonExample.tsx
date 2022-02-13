@@ -1,11 +1,13 @@
 import * as React from "react";
-
 import { DownloadOutlined } from "@ant-design/icons";
+
+import ComponentDoc from "../template/ComponentDoc";
 import Button from "../components/Button/Button";
 import Divider from "../components/Divider/Divider";
 
 const ButtonExample = () => (
-  <div style={{ marginTop: "20px" }}>
+  <>
+    <ComponentDoc title="Button" introduction="To trigger an operation" />
     <Divider orientation="left">Button With Primary + Large</Divider>
     <Button type="primary" size="large">
       Primary
@@ -37,7 +39,7 @@ const ButtonExample = () => (
     >
       Download
     </Button>{" "}
-  </div>
+  </>
 );
 
 export default ButtonExample;

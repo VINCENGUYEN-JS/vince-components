@@ -1,4 +1,6 @@
 import * as React from "react";
+
+import ComponentDoc from "../template/ComponentDoc";
 import { Row, Col } from "../layout";
 import Divider from "../components/Divider/Divider";
 
@@ -15,10 +17,8 @@ const BorderBox = (props: any) => (
 );
 
 const GridExample = () => (
-  <section className="markdown">
-    <h1>Grid</h1>
-    <p>24 Grids System</p>
-    <h2>Examples</h2>
+  <>
+    <ComponentDoc title="Grid" introduction="24 Grids" />
     <Divider>Horizontal</Divider>
     <Row>
       <Col span={8}>
@@ -60,7 +60,7 @@ const GridExample = () => (
         <BorderBox>Col 12</BorderBox>
       </Col>
     </Row>
-  </section>
+  </>
 );
 
 export default GridExample;
