@@ -72,4 +72,11 @@
       border-bottom: 2px solid #1890ff;
     }
   }
+  &-submenu-title {
+    position: relative;
+  }
+
+  &-submenu-hidden {
+    display: none;
+  }
 }
