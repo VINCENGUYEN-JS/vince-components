@@ -59,6 +59,10 @@ const responsiveObserve = {
     func(screens);
     return subUid;
   },
+
+  unsubscribe(token: number) {
+    subscribers.delete(token);
+  },
 };
 
 export default responsiveObserve;

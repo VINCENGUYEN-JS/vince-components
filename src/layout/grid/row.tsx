@@ -35,9 +35,10 @@ const Row = (props: RowProps) => {
   });
 
   React.useEffect(() => {
-    ResponsiveObserve.subscribe((screen) => {
+    const token = ResponsiveObserve.subscribe((screen) => {
       setScreens(screen);
     });
+    return () => ResponsiveObserve.unsubscribe(token);
   }, []);
 
   const getGutter = React.useCallback((): number => {
