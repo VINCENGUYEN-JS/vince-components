@@ -1,0 +1,29 @@
+@use "../../../style/variable.scss" as *;
+.result {
+  padding: 48px 32px;
+  &-image {
+    width: 250px;
+    height: 295px;
+    margin: auto;
+  }
+  &-icon {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  &-title {
+    color: $heading-color;
+    font-size: $result-title-font-size;
+    line-height: 1.8;
+    text-align: center;
+  }
+  &-subtitle {
+    color: $text-color-secondary;
+    font-size: $result-subtitle-font-size;
+    line-height: 1.6;
+    text-align: center;
+  }
+  &-extra {
+    margin: $result-extra-margin;
+    text-align: center;
+  }
+}

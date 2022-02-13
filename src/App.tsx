@@ -21,7 +21,13 @@ type NavProps = {
 
 const filterFn = (routes: CustomRouteObject[]) => (componentType: string) => {
   if (componentType === "components") {
-    const supportedComponents = ["button", "divider", "menu", "input"];
+    const supportedComponents = [
+      "button",
+      "divider",
+      "menu",
+      "input",
+      "result",
+    ];
     return routes.filter((route) => supportedComponents.includes(route.key));
   } else {
     const supportedLayouts = ["grid", "layout"];

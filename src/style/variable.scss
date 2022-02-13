@@ -19,7 +19,9 @@ $border-style-base: solid;
 // >>>Background colors.
 $heading-color: rgba($black, 85%);
 $text-color: rgba($black, 85%);
+$text-color-secondary: rgba($black, 45%);
 $component-background: #fff;
+$heading-color: rgba($black, 85%);
 
 // >>>Height Rules
 $height-base: 32px;
@@ -119,3 +121,8 @@ $layout-header-color: $text-color;
 $layout-footer-padding: 24px 50px;
 $layout-footer-background: $layout-body-background;
 $layout-sider-background: $layout-header-background;
+
+// >>>Results
+$result-title-font-size: 24px;
+$result-subtitle-font-size: $font-size-base;
+$result-extra-margin: 24px 0 0 0;

@@ -5,3 +5,4 @@ export { default as LayoutExample } from "./LayoutExample";
 export { default as MenuExample } from "./MenuExample";
 export { default as InputExample } from "./InputExample";
 export { default as OverviewExample } from "./OverviewExample";
+export { default as ResultExample } from "./ResultExample";
