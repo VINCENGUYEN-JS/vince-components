@@ -25,3 +25,13 @@ code {
   background: #fff;
   box-shadow: 0 2px 8px #f0f1f2;
 }
+
+#logo {
+  img {
+    height: 32px;
+    width: 50px;
+    margin-right: 12px;
+    vertical-align: middle;
+    border-style: none;
+  }
+}

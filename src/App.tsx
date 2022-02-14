@@ -64,7 +64,14 @@ const Nav = (props: NavProps) => {
   const { userSearch, setUserSearch } = props;
   return (
     <Row>
-      <Col span={4}>Vince's Design</Col>
+      <Col span={4}>
+        <a id="logo" href="/">
+          <img
+            alt="logo"
+            src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/160/6818968160_d71847e7-ca8e-41c3-b0ae-03b7ee16741c.png?cb=1644846838"
+          />
+        </a>
+      </Col>
       <Col span={20}>
         <>
           <Input.Search
