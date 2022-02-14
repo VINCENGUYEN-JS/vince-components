@@ -1,16 +1,10 @@
 import * as React from "react";
-import {
-  Routes,
-  Route,
-  Link,
-  useNavigate,
-  useLocation,
-  Navigate,
-} from "react-router-dom";
+import { Routes, Route, Link, useNavigate, Navigate } from "react-router-dom";
 
 import { Layout, Row, Col } from "./layout";
 import routes, { CustomRouteObject } from "./routes";
 import Menu, { MenuItem, MenuItemGroup } from "./components/Menu";
+import NotFound from "./template/NotFound";
 import Input from "./components/Input";
 import "./pages/style/index.scss";
 
@@ -87,17 +81,6 @@ const Nav = (props: NavProps) => {
   );
 };
 
-const NoMatch = () => {
-  let location = useLocation();
-
-  return (
-    <div>
-      <h3>
-        No match for <code>{location.pathname}</code>
-      </h3>
-    </div>
-  );
-};
 function App() {
   const [appRoutes, setAppRoutes] = React.useState<CustomRouteObject[]>(routes);
   const [userSearch, setUserSearch] = React.useState<string>("");
@@ -134,10 +117,10 @@ function App() {
             <div style={{ paddingLeft: "64px" }}>
               <Routes>
                 <Route path="/" element={<Navigate to="/overview" />} />
-                {appRoutes.map((route) => (
+                {routes.map((route) => (
                   <Route path={route.path} element={route.element} />
                 ))}
-                <Route path="*" element={<NoMatch />} />
+                <Route path="*" element={<NotFound />} />
               </Routes>
             </div>
           </Layout.Content>
