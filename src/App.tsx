@@ -37,8 +37,8 @@ const SideBar = (props: { appRoutes: CustomRouteObject[] }) => {
   let itemKeyForLayouts = 21;
   const selectedRoute = filterFn(appRoutes);
   return (
-    <Menu>
-      <MenuItem>
+    <Menu mode="inline" defaultSelectedKey={["1"]}>
+      <MenuItem key="1">
         <Link to="/overview"> Overview</Link>
       </MenuItem>
       <MenuItemGroup title={componentTitle}>
@@ -132,7 +132,6 @@ function App() {
             </div>
           </Layout.Content>
         </Layout>
-        <Layout.Footer>Vince Nguyen</Layout.Footer>
       </Layout>
     </div>
   );

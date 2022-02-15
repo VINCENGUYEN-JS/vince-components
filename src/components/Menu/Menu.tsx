@@ -7,6 +7,7 @@ import "./style/index.scss";
 interface MenuProps extends React.HTMLAttributes<HTMLUListElement> {
   children: React.ReactNode;
   key?: string;
+  defaultSelectedKey?: string[];
   mode?:
     | "vertical"
     | "vertical-left"
@@ -32,8 +33,15 @@ export const MenuContext = React.createContext<MenuContextProps>(
 const prefixCls = "menu";
 
 const Menu = (props: MenuProps) => {
-  const { children, style: customStyle, mode = "vertical" } = props;
-  const [selectedKeys, setSeletedKeys] = React.useState<string[]>([]);
+  const {
+    children,
+    style: customStyle,
+    defaultSelectedKey,
+    mode = "vertical",
+  } = props;
+  const [selectedKeys, setSeletedKeys] = React.useState<string[]>(
+    defaultSelectedKey || []
+  );
 
   const childList: React.ReactElement[] = parseChildren(children, []);
 
