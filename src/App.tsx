@@ -16,6 +16,7 @@ type NavProps = {
 const filterFn = (routes: CustomRouteObject[]) => (componentType: string) => {
   if (componentType === "components") {
     const supportedComponents = [
+      "card",
       "button",
       "divider",
       "menu",

@@ -10,6 +10,7 @@ import {
   InputExample,
   OverviewExample,
   ResultExample,
+  CardExample,
 } from "./pages";
 
 export interface CustomRouteObject extends RouteObject {
@@ -21,6 +22,11 @@ const routes: CustomRouteObject[] = [
     key: "overview",
     path: "/overview",
     element: <OverviewExample />,
+  },
+  {
+    key: "card",
+    path: "/card",
+    element: <CardExample />,
   },
   {
     key: "button",

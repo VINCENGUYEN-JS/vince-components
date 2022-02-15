@@ -12,6 +12,7 @@ $primary-color: #1890ff;
 // >>>Border Colors
 $border-color-base: #d9d9d9;
 $border-width-base: 1px;
+$border-color-split: #f0f0f0;
 
 // >>>Border from themes/default.less
 $border-style-base: solid;
@@ -22,6 +23,7 @@ $text-color: rgba($black, 85%);
 $text-color-secondary: rgba($black, 45%);
 $component-background: #fff;
 $heading-color: rgba($black, 85%);
+$font-variant-base: tabular-nums;
 
 // >>>Height Rules
 $height-base: 32px;
@@ -126,3 +128,12 @@ $layout-sider-background: $layout-header-background;
 $result-title-font-size: 24px;
 $result-subtitle-font-size: $font-size-base;
 $result-extra-margin: 24px 0 0 0;
+
+// >>>CardProps
+$card-head-color: $heading-color;
+$card-head-font-size: $font-size-lg;
+$card-head-background: transparent;
+$card-background: $component-background;
+$card-radius: $border-radius-base;
+$card-head-height: 48px;
+$card-padding-base: 24px;
