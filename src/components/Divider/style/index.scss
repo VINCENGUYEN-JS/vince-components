@@ -1,8 +1,10 @@
+@use "../../../style/reset.scss" as *;
 @use "../../../style/variable.scss" as *;
 
 $divider-color: rgba(0, 0, 0, 6%);
 
 .divider {
+  @include reset-component();
   border-top: $border-width-base solid $divider-color;
   &-horizontal {
     width: 100%;
