@@ -128,6 +128,10 @@ function App() {
             <div style={{ paddingLeft: "64px" }}>
               <Routes>
                 <Route path="/" element={<Navigate to="/overview" />} />
+                <Route
+                  path="/component-ants"
+                  element={<Navigate to="/overview" />}
+                />
                 {routes.map((route) => (
                   <Route path={route.path} element={route.element} />
                 ))}
