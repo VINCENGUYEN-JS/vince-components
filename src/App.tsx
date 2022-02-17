@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Routes, Route, Link, useNavigate, Navigate } from "react-router-dom";
 
+import useDocument from "./useDocument";
 import { Layout, Row, Col } from "./layout";
 import routes, { CustomRouteObject } from "./routes";
 import Menu, { MenuItem, MenuItemGroup } from "./components/Menu";
@@ -92,6 +93,8 @@ const Nav = (props: NavProps) => {
 function App() {
   const [appRoutes, setAppRoutes] = React.useState<CustomRouteObject[]>(routes);
   const [userSearch, setUserSearch] = React.useState<string>("");
+
+  useDocument();
 
   React.useEffect(() => {
     const userSearchRoute = routes.filter((route) => {
