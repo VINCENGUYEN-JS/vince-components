@@ -7,3 +7,4 @@ export { default as InputExample } from "./InputExample";
 export { default as OverviewExample } from "./OverviewExample";
 export { default as ResultExample } from "./ResultExample";
 export { default as CardExample } from "./CardExample";
+export { default as TagExample } from "./TagExample";

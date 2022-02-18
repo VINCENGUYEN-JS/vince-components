@@ -11,6 +11,7 @@ import {
   OverviewExample,
   ResultExample,
   CardExample,
+  TagExample,
 } from "./pages";
 
 export interface CustomRouteObject extends RouteObject {
@@ -47,6 +48,11 @@ const routes: CustomRouteObject[] = [
     key: "layout",
     path: "/layout",
     element: <LayoutExample />,
+  },
+  {
+    key: "tag",
+    path: "/tag",
+    element: <TagExample />,
   },
   {
     key: "menu",
