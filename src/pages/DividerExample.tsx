@@ -1,7 +1,7 @@
 import * as React from "react";
 
-import ComponentDoc from "../template/ComponentDoc";
-import Divider from "../components/Divider/Divider";
+import ComponentDoc from "template/ComponentDoc";
+import Divider from "components/Divider/Divider";
 
 const DividerExample = () => (
   <>

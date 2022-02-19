@@ -1,8 +1,8 @@
 import * as React from "react";
 
-import ComponentDoc from "../template/ComponentDoc";
-import Divider from "../components/Divider/Divider";
-import Menu, { MenuItem, MenuItemGroup, SubMenu } from "../components/Menu";
+import ComponentDoc from "template/ComponentDoc";
+import Divider from "components/Divider/Divider";
+import Menu, { MenuItem, MenuItemGroup, SubMenu } from "components/Menu";
 
 const getSvgIcon = (style = {}) => {
   const path =

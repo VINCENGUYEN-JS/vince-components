@@ -1,7 +1,7 @@
 import * as React from "react";
 
-import Tag from "../components/Tag";
-import ComponentDoc from "../template/ComponentDoc";
+import Tag from "components/Tag";
+import ComponentDoc from "template/ComponentDoc";
 
 const TagExample = () => (
   <ComponentDoc

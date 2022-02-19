@@ -1,8 +1,8 @@
 import * as React from "react";
 
-import ComponentDoc from "../template/ComponentDoc";
-import Divider from "../components/Divider/Divider";
-import Input from "../components/Input";
+import ComponentDoc from "template/ComponentDoc";
+import Divider from "components/Divider/Divider";
+import Input from "components/Input";
 
 const InputExample = () => {
   const onChange = (value: any) => console.log(value);

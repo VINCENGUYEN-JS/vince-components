@@ -2,8 +2,8 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 
 import { HomeOutlined } from "@ant-design/icons";
-import Button from "../components/Button/Button";
-import Result from "../components/Result";
+import Button from "components/Button/Button";
+import Result from "components/Result";
 
 const NotFound = () => {
   return (

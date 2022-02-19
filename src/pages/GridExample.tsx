@@ -1,8 +1,8 @@
 import * as React from "react";
 
-import ComponentDoc from "../template/ComponentDoc";
-import { Row, Col } from "../layout";
-import Divider from "../components/Divider/Divider";
+import ComponentDoc from "template/ComponentDoc";
+import { Row, Col } from "layout";
+import Divider from "components/Divider/Divider";
 
 const BorderBox = (props: any) => (
   <div

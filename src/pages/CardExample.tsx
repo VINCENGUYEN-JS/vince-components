@@ -1,7 +1,7 @@
 import * as React from "react";
 
-import ComponentDoc from "../template/ComponentDoc";
-import Card from "../components/Card";
+import ComponentDoc from "template/ComponentDoc";
+import Card from "components/Card";
 
 const CardExample = () => {
   return (

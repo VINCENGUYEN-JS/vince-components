@@ -1,9 +1,9 @@
 import * as React from "react";
 import { DownloadOutlined } from "@ant-design/icons";
 
-import ComponentDoc from "../template/ComponentDoc";
-import Button from "../components/Button/Button";
-import Divider from "../components/Divider/Divider";
+import ComponentDoc from "template/ComponentDoc";
+import Button from "components/Button/Button";
+import Divider from "components/Divider/Divider";
 
 const ButtonExample = () => (
   <>

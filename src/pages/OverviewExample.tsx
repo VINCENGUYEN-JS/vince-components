@@ -1,11 +1,11 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 
-import ComponentDoc from "../template/ComponentDoc";
-import Divider from "../components/Divider/Divider";
-import Input from "../components/Input";
-import Card from "../components/Card";
-import { Row, Col } from "../layout";
+import ComponentDoc from "template/ComponentDoc";
+import Divider from "components/Divider/Divider";
+import Input from "components/Input";
+import Card from "components/Card";
+import { Row, Col } from "layout";
 
 const styleImg = {
   display: "flex",

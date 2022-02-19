@@ -1,8 +1,8 @@
 import * as React from "react";
 
-import ComponentDoc from "../template/ComponentDoc";
-import { Layout } from "../layout";
-import Divider from "../components/Divider/Divider";
+import ComponentDoc from "template/ComponentDoc";
+import { Layout } from "layout";
+import Divider from "components/Divider/Divider";
 
 const LayoutExample = () => (
   <>

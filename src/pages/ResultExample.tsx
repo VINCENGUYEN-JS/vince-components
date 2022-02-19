@@ -1,9 +1,9 @@
 import * as React from "react";
 
-import ComponentDoc from "../template/ComponentDoc";
-import Divider from "../components/Divider/Divider";
-import Button from "../components/Button/Button";
-import Result from "../components/Result";
+import ComponentDoc from "template/ComponentDoc";
+import Divider from "components/Divider/Divider";
+import Button from "components/Button/Button";
+import Result from "components/Result";
 
 const ResultExample = () => (
   <>
