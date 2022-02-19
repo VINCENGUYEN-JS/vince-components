@@ -8,7 +8,7 @@ const TagExample = () => (
     title="Tag"
     introduction="It can be used to tag by dimension or property"
   >
-    <Tag>Tag</Tag>
+    <Tag>Tag 1</Tag>
   </ComponentDoc>
 );
 

@@ -1,0 +1,10 @@
+@use "../../../style/reset.scss" as *;
+@use "../../../style/variable.scss" as *;
+
+.tag {
+  @include reset-component();
+  font-size: $tag-font-size;
+  line-height: $tag-line-height;
+  border: $border-width-base $border-style-base $border-color-base;
+  border-radius: $border-radius-base;
+}

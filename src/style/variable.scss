@@ -24,6 +24,7 @@ $text-color-secondary: rgba($black, 45%);
 $component-background: #fff;
 $heading-color: rgba($black, 85%);
 $font-variant-base: tabular-nums;
+$background-color-light: hsv(0, 0, 98%);
 
 // >>>Height Rules
 $height-base: 32px;
@@ -49,6 +50,7 @@ $margin-xs: 8px; // small items
 $margin-xss: 4px; // more small
 
 // >>>Font-size , border
+$font-size-sm: 12px;
 $font-size-base: 14px;
 $font-size-lg: $font-size-base + 2px;
 $line-height-base: 1.5715;
@@ -138,3 +140,9 @@ $card-radius: $border-radius-base;
 $card-head-height: 48px;
 $card-padding-base: 24px;
 $card-head-padding: 16px;
+
+// >>>tags
+$tag-default-bg: $background-color-light;
+$tag-default-color: $text-color;
+$tag-font-size: $font-size-sm;
+$tag-line-height: 20px;
