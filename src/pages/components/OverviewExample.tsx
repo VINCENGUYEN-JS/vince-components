@@ -5,6 +5,7 @@ import ComponentDoc from "template/ComponentDoc";
 import Divider from "components/Divider/Divider";
 import Input from "components/Input";
 import Card from "components/Card";
+import Tag from "components/Tag";
 import { Row, Col } from "layout";
 
 const styleImg = {
@@ -24,6 +25,7 @@ const Overview = () => (
       <Input.Search placeholder="Search in components" />
       <Divider />
       <h2 className="component-overview-group-title">General</h2>
+      <Tag>3</Tag>
       <Row>
         <Col span={6}>
           <Link to="/button">

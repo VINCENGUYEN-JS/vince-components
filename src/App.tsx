@@ -27,7 +27,7 @@ const filterFn = (routes: CustomRouteObject[]) => (componentType: string) => {
     ];
     return routes.filter((route) => supportedComponents.includes(route.key));
   } else {
-    const supportedLayouts = ["grid", "layout"];
+    const supportedLayouts = ["grid", "layout", "space"];
     return routes.filter((route) => supportedLayouts.includes(route.key));
   }
 };
