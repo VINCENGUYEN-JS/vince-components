@@ -6,7 +6,7 @@ import Divider from "components/Divider/Divider";
 import Input from "components/Input";
 import Card from "components/Card";
 import Tag from "components/Tag";
-import { Row, Col } from "layout";
+import { Row, Col, Space } from "layout";
 
 const styleImg = {
   display: "flex",
@@ -24,8 +24,12 @@ const Overview = () => (
       <Divider />
       <Input.Search placeholder="Search in components" />
       <Divider />
-      <h2 className="component-overview-group-title">General</h2>
-      <Tag>3</Tag>
+      <h2 className="component-overview-group-title">
+        <Space style={{ gap: "8px" }}>
+          General
+          <Tag>1</Tag>
+        </Space>
+      </h2>
       <Row>
         <Col span={6}>
           <Link to="/button">

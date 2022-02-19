@@ -1,0 +1,8 @@
+.space {
+  display: inline-flex;
+  &-align {
+    &-center {
+      align-items: "center";
+    }
+  }
+}
