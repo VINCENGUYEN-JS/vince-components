@@ -10,14 +10,15 @@ const ResultExample = () => (
     <ComponentDoc
       title="Result"
       introduction="Used to feed back the results of a series of operation tasks"
-    />
-    <Divider orientation="left">404</Divider>
-    <Result
-      status="404"
-      title="404"
-      subTitle="Sorry , the page you visited does not exist"
-      extra={<Button type="primary">BackHome</Button>}
-    />
+    >
+      <Divider orientation="left">404</Divider>
+      <Result
+        status="404"
+        title="404"
+        subTitle="Sorry , the page you visited does not exist"
+        extra={<Button type="primary">BackHome</Button>}
+      />
+    </ComponentDoc>
   </>
 );
 

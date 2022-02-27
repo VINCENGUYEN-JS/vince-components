@@ -42,10 +42,23 @@
     border-left: 1px solid #f0f0f0;
     font-weight: 600;
   }
+  .markdown.api-container table {
+    font-size: 13px;
+    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier,
+      monospace;
+    line-height: 1.5715;
+  }
   .markdown.api-container table th,
   .markdown.api-container table td {
     padding: 12px;
     border-color: #f0f0f0;
     border-width: 1px 0;
+    text-align: left;
+  }
+  table,
+  thead,
+  tbody {
+    border: 1px solid #f0f0f0;
+    border-collapse: collapse;
   }
 }

@@ -35,37 +35,38 @@ function itemIcon(props: any) {
 
 const MenuExample = () => (
   <>
-    <ComponentDoc title="Menu" introduction="A versatile menu for navigation" />
-    <div style={{ width: 200 }}>
-      <Divider>Vertical Menu</Divider>
-      <Menu>
-        <MenuItem key="1">1</MenuItem>
-        <MenuItem key="2">2-1</MenuItem>
-        <MenuItem key="3">3-1</MenuItem>
-      </Menu>
-      <Divider>Horizontal Menu</Divider>
-      <Menu mode="horizontal">
-        <MenuItem key="1">1</MenuItem>
-        <MenuItem key="2">2-1</MenuItem>
-        <MenuItem key="3">3-1</MenuItem>
-      </Menu>
-      <Divider>Menu Group</Divider>
-      <Menu>
-        <MenuItemGroup title="Menu Group">
+    <ComponentDoc title="Menu" introduction="A versatile menu for navigation">
+      <div style={{ width: 200 }}>
+        <Divider>Vertical Menu</Divider>
+        <Menu>
           <MenuItem key="1">1</MenuItem>
           <MenuItem key="2">2-1</MenuItem>
           <MenuItem key="3">3-1</MenuItem>
-        </MenuItemGroup>
-      </Menu>
-      <Divider>Sub Menu</Divider>
-      <Menu>
-        <SubMenu title="Menu Group" itemIcon={itemIcon}>
+        </Menu>
+        <Divider>Horizontal Menu</Divider>
+        <Menu mode="horizontal">
           <MenuItem key="1">1</MenuItem>
           <MenuItem key="2">2-1</MenuItem>
           <MenuItem key="3">3-1</MenuItem>
-        </SubMenu>
-      </Menu>
-    </div>
+        </Menu>
+        <Divider>Menu Group</Divider>
+        <Menu>
+          <MenuItemGroup title="Menu Group">
+            <MenuItem key="1">1</MenuItem>
+            <MenuItem key="2">2-1</MenuItem>
+            <MenuItem key="3">3-1</MenuItem>
+          </MenuItemGroup>
+        </Menu>
+        <Divider>Sub Menu</Divider>
+        <Menu>
+          <SubMenu title="Menu Group" itemIcon={itemIcon}>
+            <MenuItem key="1">1</MenuItem>
+            <MenuItem key="2">2-1</MenuItem>
+            <MenuItem key="3">3-1</MenuItem>
+          </SubMenu>
+        </Menu>
+      </div>
+    </ComponentDoc>
   </>
 );
 
