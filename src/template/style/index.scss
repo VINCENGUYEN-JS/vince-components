@@ -35,4 +35,17 @@
     border: none;
     outline: none;
   }
+  .api-container table th:first-child {
+    border-left: 1px solid #f0f0f0;
+  }
+  .api-container table td:first-child {
+    border-left: 1px solid #f0f0f0;
+    font-weight: 600;
+  }
+  .markdown.api-container table th,
+  .markdown.api-container table td {
+    padding: 12px;
+    border-color: #f0f0f0;
+    border-width: 1px 0;
+  }
 }
