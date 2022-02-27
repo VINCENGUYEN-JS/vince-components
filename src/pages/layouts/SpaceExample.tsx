@@ -4,10 +4,15 @@ import { Space } from "layout";
 import ComponentDoc from "template/ComponentDoc";
 import Button from "components/Button/Button";
 import Divider from "components/Divider/Divider";
+import { spaceAPI } from "../componentApi";
 
 const SpaceExample = () => {
   return (
-    <ComponentDoc title="Space" introduction="Set components spacing">
+    <ComponentDoc
+      title="Space"
+      introduction="Set components spacing"
+      api={spaceAPI}
+    >
       <Divider> [horizontal]</Divider>
       <Space>
         space

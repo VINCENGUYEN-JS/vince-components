@@ -4,12 +4,14 @@ import ComponentDoc from "template/ComponentDoc";
 import Divider from "components/Divider/Divider";
 import Button from "components/Button/Button";
 import Result from "components/Result";
+import { resultAPI } from "../componentApi";
 
 const ResultExample = () => (
   <>
     <ComponentDoc
       title="Result"
       introduction="Used to feed back the results of a series of operation tasks"
+      api={resultAPI}
     >
       <Divider orientation="left">404</Divider>
       <Result

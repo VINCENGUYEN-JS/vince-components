@@ -12,6 +12,7 @@ const ButtonExample = () => (
       title="Button"
       introduction="To trigger an operation"
       api={buttonAPI}
+      apiIntroduction="Diffrent button styles can be combined together.The recomended order is type -> shape -> size"
     >
       <Divider orientation="left">Button With Primary + Large</Divider>
       <Button type="primary" size="large">
