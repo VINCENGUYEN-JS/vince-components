@@ -3,6 +3,7 @@ type APIProps = {
   description: string;
   type: string;
   default: string;
+  title?: string;
 };
 
 const buttonAPI: APIProps[] = [
@@ -89,4 +90,25 @@ const spaceAPI: APIProps[] = [
   },
 ];
 
-export { buttonAPI, cardAPI, dividerAPI, tagAPI, resultAPI, spaceAPI };
+const gridAPI: APIProps[][] = [
+  [
+    {
+      title: "Row",
+      property: "gutter",
+      description: "Space between grids",
+      type: "number | object | array",
+      default: "0",
+    },
+  ],
+  [
+    {
+      title: "Col",
+      property: "span",
+      description: "number of cells to occupy",
+      type: "number",
+      default: "none",
+    },
+  ],
+];
+
+export { buttonAPI, cardAPI, dividerAPI, tagAPI, resultAPI, spaceAPI, gridAPI };

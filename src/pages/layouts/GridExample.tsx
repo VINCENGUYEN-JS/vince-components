@@ -3,6 +3,7 @@ import * as React from "react";
 import ComponentDoc from "template/ComponentDoc";
 import { Row, Col } from "layout";
 import Divider from "components/Divider/Divider";
+import { gridAPI } from "pages/componentApi";
 
 const BorderBox = (props: any) => (
   <div
@@ -18,7 +19,7 @@ const BorderBox = (props: any) => (
 
 const GridExample = () => (
   <>
-    <ComponentDoc title="Grid" introduction="24 Grids">
+    <ComponentDoc title="Grid" introduction="24 Grids" api={gridAPI}>
       <Divider>Horizontal</Divider>
       <Row>
         <Col span={8}>
