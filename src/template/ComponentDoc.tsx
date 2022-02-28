@@ -18,7 +18,9 @@ type ComponentDocProps = {
   apiIntroduction?: string;
 };
 function isObject(obj: any) {
-  return obj != null && obj.constructor.name === "Object";
+  return (
+    obj != null && obj.constructor.name === "Object" && !Array.isArray(obj)
+  );
 }
 
 const ComponentDoc = (props: ComponentDocProps) => {
@@ -29,7 +31,7 @@ const ComponentDoc = (props: ComponentDocProps) => {
         <span>API</span>
       </h2>
       {apiIntroduction && <p>{apiIntroduction}</p>}
-      {api && isObject(api[0]) ? (
+      {!api ? null : isObject(api[0]) ? (
         <table>
           <thead>
             <tr>
