@@ -12,6 +12,7 @@
   color: #000000d9;
   font-size: 14px;
   line-height: 2;
+  padding-right: 170px;
   h1 {
     margin-top: 8px;
     margin-bottom: 20px;
@@ -38,17 +39,23 @@
     border: none;
     outline: none;
   }
-  .api-container table th:first-child {
-    border-left: 1px solid #f0f0f0;
+  table {
+    width: 100%;
+    direction: ltr;
+    border-collapse: collapse;
+    empty-cells: show;
+    border: 0;
   }
-  .api-container table td:first-child {
-    border-left: 1px solid #f0f0f0;
-    font-weight: 600;
+  > table th,
+  > table td {
+    text-align: left;
+    border: 1px solid #f0f0f0;
   }
   .markdown.api-container table {
     font-size: 13px;
     font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier,
       monospace;
+    margin: 2rem 0;
     line-height: 1.5715;
   }
   .markdown.api-container table th,
@@ -58,10 +65,23 @@
     border-width: 1px 0;
     text-align: left;
   }
-  table,
-  thead,
-  tbody {
-    border: 1px solid #f0f0f0;
-    border-collapse: collapse;
+  .api-container table th:first-child,
+  .api-container table td:first-child {
+    border-left: 1px solid #f0f0f0;
+  }
+  &.api-container table td:first-child {
+    width: 18%;
+    color: #595959;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  &.api-container table td:nth-child(2) {
+    width: 50%;
+  }
+  &.api-container table td:nth-child(3) {
+    width: 22%;
+  }
+  &.api-container table td:nth-child(4) {
+    width: 20%;
   }
 }
