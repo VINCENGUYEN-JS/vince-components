@@ -4,11 +4,14 @@ import Tag from "components/Tag";
 import ComponentDoc from "template/ComponentDoc";
 import { tagAPI } from "../componentApi";
 
+const tagCode = `<Tag>Tag 1 </Tag>`;
+
 const TagExample = () => (
   <ComponentDoc
     title="Tag"
     introduction="It can be used to tag by dimension or property"
     api={tagAPI}
+    code={tagCode}
   >
     <Tag>Tag 1</Tag>
   </ComponentDoc>

@@ -1,5 +1,5 @@
 import * as React from "react";
-
+import Code from "./Code";
 import "./style/index.scss";
 
 type APIProps = {
@@ -16,6 +16,7 @@ type ComponentDocProps = {
   children?: React.ReactNode;
   api?: APIProps[] | APIProps[][];
   apiIntroduction?: string;
+  code?: string;
 };
 function isObject(obj: any) {
   return (
@@ -24,7 +25,7 @@ function isObject(obj: any) {
 }
 
 const ComponentDoc = (props: ComponentDocProps) => {
-  const { title, introduction, api, apiIntroduction, children } = props;
+  const { title, introduction, api, apiIntroduction, code, children } = props;
   const tableAPI = (
     <section className="markdown api-container">
       <h2>
@@ -93,6 +94,13 @@ const ComponentDoc = (props: ComponentDocProps) => {
       <p>{introduction}</p>
       <h2>Examples</h2>
       {children}
+
+      {code && (
+        <>
+          <h2>How to use it</h2>
+          <Code code={code} language="javascript" />{" "}
+        </>
+      )}
       {api && tableAPI}
     </section>
   );
