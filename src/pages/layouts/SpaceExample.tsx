@@ -6,12 +6,23 @@ import Button from "components/Button/Button";
 import Divider from "components/Divider/Divider";
 import { spaceAPI } from "../componentApi";
 
+const spaceCode = `<Space>
+  space
+  <Button type="primary">Button</Button>
+</Space>
+
+<Space direction="vertical">
+  space
+  <Button type="primary">Button</Button>
+</Space>`;
+
 const SpaceExample = () => {
   return (
     <ComponentDoc
       title="Space"
       introduction="Set components spacing"
       api={spaceAPI}
+      code={spaceCode}
     >
       <Divider> [horizontal]</Divider>
       <Space>

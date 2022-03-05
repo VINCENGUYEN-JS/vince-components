@@ -6,6 +6,11 @@ import Button from "components/Button/Button";
 import Divider from "components/Divider/Divider";
 import { buttonAPI } from "../componentApi";
 
+const buttonCode = `<Button type="primary">Primary</Button>
+<Button type="primary size="large">Primary + Large</Button>Default</Button>
+<Button type="primary shape="round">Primary + Round</Button>Default</Button>
+<Button type="primary" icon={<DownloadOutlined/>} shape="round" size="large">Download</Button>`;
+
 const ButtonExample = () => (
   <>
     <ComponentDoc
@@ -13,6 +18,7 @@ const ButtonExample = () => (
       introduction="To trigger an operation"
       api={buttonAPI}
       apiIntroduction="Diffrent button styles can be combined together.The recomended order is type -> shape -> size"
+      code={buttonCode}
     >
       <Divider orientation="left">Button With Primary + Large</Divider>
       <Button type="primary" size="large">
@@ -44,7 +50,7 @@ const ButtonExample = () => (
         size="large"
       >
         Download
-      </Button>{" "}
+      </Button>
     </ComponentDoc>
   </>
 );

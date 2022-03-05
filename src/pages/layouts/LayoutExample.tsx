@@ -4,11 +4,36 @@ import ComponentDoc from "template/ComponentDoc";
 import { Layout } from "layout";
 import Divider from "components/Divider/Divider";
 
+const layoutCode = `<Layout>
+  <Layout.Header>Header</Layout.Header>
+  <Layout.Content>Content</Layout.Content>
+  <Layout.Footer>Footer</Layout.Footer>
+</Layout>
+
+<Layout>
+  <Layout.Header>Header</Layout.Header>
+  <Layout>
+    <Layout.Sider>Sider</Layout.Sider>
+    <Layout.Content>Content</Layout.Content>
+  </Layout>
+  <Layout.Footer>Footer</Layout.Footer>
+</Layout>
+
+<Layout>
+  <Layout.Sider>Sider</Layout.Sider>
+  <Layout>
+    <Layout.Header>Header</Layout.Header>
+    <Layout.Content>Content</Layout.Content>
+    <Layout.Footer>Footer</Layout.Footer>
+  </Layout>
+  </Layout>`;
+
 const LayoutExample = () => (
   <>
     <ComponentDoc
       title="Layout"
-      introduction="Layout is a container for arranging content."
+      introduction="Layout is a container for arranging content"
+      code={layoutCode}
     >
       <div className="layout-example">
         <Divider>Basic Layout</Divider>

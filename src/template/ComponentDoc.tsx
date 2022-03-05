@@ -94,7 +94,6 @@ const ComponentDoc = (props: ComponentDocProps) => {
       <p>{introduction}</p>
       <h2>Examples</h2>
       {children}
-
       {code && (
         <>
           <h2>How to use it</h2>

@@ -17,9 +17,44 @@ const BorderBox = (props: any) => (
   </div>
 );
 
+const gridCode = `<Row>
+  <Col span={8}>
+    <BorderBox>Col 8</BorderBox>
+  </Col>
+  <Col span={8}>
+    <BorderBox>Col 8</BorderBox>
+  </Col>
+  <Col span={8}>
+    <BorderBox>Col 8</BorderBox>
+  </Col>
+</Row>
+
+<Row gutter={16}>
+  <Col span={12}>
+    <BorderBox>Col 12</BorderBox>
+  </Col>
+  <Col span={12}>
+    <BorderBox>Col 12</BorderBox>
+  </Col>
+ </Row>
+
+<Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+  <Col span={12}>
+    <BorderBox>Col 12</BorderBox>
+   </Col>
+   <Col span={12}>
+    <BorderBox>Col 12</BorderBox>
+   </Col>
+</Row>`;
+
 const GridExample = () => (
   <>
-    <ComponentDoc title="Grid" introduction="24 Grids" api={gridAPI}>
+    <ComponentDoc
+      title="Grid"
+      introduction="24 Grids"
+      api={gridAPI}
+      code={gridCode}
+    >
       <Divider>Horizontal</Divider>
       <Row>
         <Col span={8}>
