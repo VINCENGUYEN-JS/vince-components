@@ -3,6 +3,7 @@ import * as React from "react";
 import ComponentDoc from "template/ComponentDoc";
 import { Layout } from "layout";
 import Divider from "components/Divider/Divider";
+import { layoutAPI } from "../componentApi";
 
 const layoutCode = `<Layout>
   <Layout.Header>Header</Layout.Header>
@@ -34,6 +35,7 @@ const LayoutExample = () => (
       title="Layout"
       introduction="Layout is a container for arranging content"
       code={layoutCode}
+      api={layoutAPI}
     >
       <div className="layout-example">
         <Divider>Basic Layout</Divider>

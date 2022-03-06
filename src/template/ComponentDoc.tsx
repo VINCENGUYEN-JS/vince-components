@@ -57,33 +57,37 @@ const ComponentDoc = (props: ComponentDocProps) => {
         </table>
       ) : (
         (api as APIProps[][]).map((array) => {
-          return array.map((data) => {
-            return (
-              <>
-                <h3>
-                  <span>{data?.title}</span>
-                </h3>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Property</th>
-                      <th>Description</th>
-                      <th>Type</th>
-                      <th>Default</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>{data.property}</td>
-                      <td>{data.description}</td>
-                      <td>{data.type}</td>
-                      <td>{data.default}</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </>
-            );
-          });
+          return (
+            <>
+              <h3>
+                <span>{array[0].title}</span>
+              </h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {array.map((data) => {
+                    return (
+                      <>
+                        <tr>
+                          <td>{data.property}</td>
+                          <td>{data.description}</td>
+                          <td>{data.type}</td>
+                          <td>{data.default}</td>
+                        </tr>
+                      </>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </>
+          );
         })
       )}
     </section>
@@ -97,7 +101,7 @@ const ComponentDoc = (props: ComponentDocProps) => {
       {code && (
         <>
           <h2>How to use it</h2>
-          <Code code={code} language="javascript" />{" "}
+          <Code code={code} language="javascript" />
         </>
       )}
       {api && tableAPI}

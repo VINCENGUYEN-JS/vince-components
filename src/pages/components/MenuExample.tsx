@@ -3,6 +3,7 @@ import * as React from "react";
 import ComponentDoc from "template/ComponentDoc";
 import Divider from "components/Divider/Divider";
 import Menu, { MenuItem, MenuItemGroup, SubMenu } from "components/Menu";
+import { menuAPI } from "../componentApi";
 
 const getSvgIcon = (style = {}) => {
   const path =
@@ -38,11 +39,13 @@ const menuCode = `<Menu>
  <MenuItem key="2">2-1</MenuItem>
  <MenuItem key="3">3-1</MenuItem>
 </Menu>
+
 <Menu mode="horizontal">
  <MenuItem key="1">1</MenuItem>
  <MenuItem key="2">2-1</MenuItem>
  <MenuItem key="3">3-1</MenuItem>
 </Menu>
+
 <Menu>
 <MenuItemGroup title="Menu Group">
   <MenuItem key="1">1</MenuItem>
@@ -50,6 +53,7 @@ const menuCode = `<Menu>
   <MenuItem key="3">3-1</MenuItem>
 </MenuItemGroup>
 </Menu>
+
 <Menu>
   <SubMenu title="Menu Group" itemIcon={itemIcon}>
     <MenuItem key="1">1</MenuItem>
@@ -64,6 +68,7 @@ const MenuExample = () => (
       title="Menu"
       introduction="A versatile menu for navigation"
       code={menuCode}
+      api={menuAPI}
     >
       <div style={{ width: 200 }}>
         <Divider>Vertical Menu</Divider>

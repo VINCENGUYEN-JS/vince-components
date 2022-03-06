@@ -3,6 +3,7 @@ import * as React from "react";
 import ComponentDoc from "template/ComponentDoc";
 import Divider from "components/Divider/Divider";
 import Input from "components/Input";
+import { inputAPI } from "../componentApi";
 
 const inputCode = `<Input placeholder="Basic Usage" />
 <Input.Search onSearch={onSearch} onChange={onChange} placeholder="Search something">`;
@@ -16,6 +17,7 @@ const InputExample = () => {
         title="Input"
         introduction="A basic widget for getting the user input is a text field. Keyboard and mouse can be used for providing or changing data."
         code={inputCode}
+        api={inputAPI}
       >
         <Input placeholder="Basic Usage" />
         <Divider orientation="left">Input Search</Divider>

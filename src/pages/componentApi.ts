@@ -111,4 +111,109 @@ const gridAPI: APIProps[][] = [
   ],
 ];
 
-export { buttonAPI, cardAPI, dividerAPI, tagAPI, resultAPI, spaceAPI, gridAPI };
+const inputAPI: APIProps[][] = [
+  [
+    {
+      title: "Input",
+      property: "placeholder",
+      description: "placeholder of input",
+      type: "string",
+      default: "-",
+    },
+  ],
+  [
+    {
+      title: "Input.Search",
+      property: "onSearch",
+      description:
+        "The callback fn triggered when you clock on the search-icon,or press the Enter key",
+      type: "function(value,event)",
+      default: "-",
+    },
+  ],
+];
+
+const menuAPI: APIProps[][] = [
+  [
+    {
+      title: "Menu",
+      property: "defaultSelectedKeys",
+      description: "The default selected keys",
+      type: "string[]",
+      default: "-",
+    },
+    {
+      property: "mode",
+      description: "Type of menu",
+      type: "horizontal | vertical | inline",
+      default: "verical",
+    },
+  ],
+  [
+    {
+      title: "Menu.Item",
+      property: "key",
+      description: "Unique ID of menu item",
+      type: "string",
+      default: "-",
+    },
+  ],
+  [
+    {
+      title: "Menu.ItemGroup",
+      property: "title",
+      description: "The title of the group",
+      type: "React Node",
+      default: "-",
+    },
+  ],
+  [
+    {
+      title: "Menu.SubMenu",
+      property: "icon",
+      description: "Icon of sub menu",
+      type: "React Node",
+      default: "-",
+    },
+    {
+      property: "children",
+      description: "Sub menu items",
+      type: "Array<MenuItem | SubMenu>",
+      default: "-",
+    },
+  ],
+];
+
+const layoutAPI: APIProps[][] = [
+  [
+    {
+      title: "Layout",
+      property: "hasSider",
+      description: "Whether to display the side bar",
+      type: "boolean",
+      default: "false",
+    },
+  ],
+  [
+    {
+      title: "Layout.Sider",
+      property: "width",
+      description: "Width of the sidebar",
+      type: "number | string",
+      default: "200",
+    },
+  ],
+];
+
+export {
+  buttonAPI,
+  cardAPI,
+  dividerAPI,
+  tagAPI,
+  resultAPI,
+  spaceAPI,
+  gridAPI,
+  menuAPI,
+  inputAPI,
+  layoutAPI,
+};
