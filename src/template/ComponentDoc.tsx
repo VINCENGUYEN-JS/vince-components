@@ -1,5 +1,10 @@
 import * as React from "react";
+import PlusOutlined from "@ant-design/icons/PlusOutlined";
+import MinusOutlined from "@ant-design/icons/MinusOutlined";
+
 import Code from "./Code";
+import { Space } from "../layout";
+import classNames from "classnames";
 import "./style/index.scss";
 
 type APIProps = {
@@ -26,6 +31,10 @@ function isObject(obj: any) {
 
 const ComponentDoc = (props: ComponentDocProps) => {
   const { title, introduction, api, apiIntroduction, code, children } = props;
+  const [exampleIsOn, setExample] = React.useState(false);
+  const [codeIsOn, setCode] = React.useState(false);
+  const ExpandOrUnExpandIcon = !exampleIsOn ? MinusOutlined : PlusOutlined;
+  const ExpandOrUnExpandIcon2 = !codeIsOn ? MinusOutlined : PlusOutlined;
   const tableAPI = (
     <section className="markdown api-container">
       <h2>
@@ -92,17 +101,26 @@ const ComponentDoc = (props: ComponentDocProps) => {
       )}
     </section>
   );
+  const exampleClassName = classNames({
+    exampleHidden: exampleIsOn,
+  });
   return (
     <section className="markdown">
       <h1>{title}</h1>
       <p>{introduction}</p>
-      <h2>Examples</h2>
-      {children}
+      <Space align="baseline">
+        <h2>Examples</h2>
+        <ExpandOrUnExpandIcon onClick={() => setExample(!exampleIsOn)} />
+      </Space>
+      <div className={exampleClassName}>{children}</div>
       {code && (
-        <>
-          <h2>How to use it</h2>
-          <Code code={code} language="javascript" />
-        </>
+        <div>
+          <Space align="baseline">
+            <h2>How to use it</h2>
+            <ExpandOrUnExpandIcon2 onClick={() => setCode(!codeIsOn)} />
+          </Space>
+          <Code code={code} language="javascript" codeIsOn={codeIsOn} />
+        </div>
       )}
       {api && tableAPI}
     </section>

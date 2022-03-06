@@ -5,14 +5,16 @@ import "prismjs/themes/prism-tomorrow.css";
 type CodeProps = {
   code: string;
   language: string;
+  codeIsOn: boolean;
 };
 
-export default function Code({ code, language }: CodeProps) {
+export default function Code({ code, language, codeIsOn }: CodeProps) {
   React.useEffect(() => {
     highlightAll();
   }, []);
+  console.log({ code });
   return (
-    <div className="Code">
+    <div className={codeIsOn ? "codeHidden" : ""}>
       <pre>
         <code className={`language-${language}`}>{code}</code>
       </pre>

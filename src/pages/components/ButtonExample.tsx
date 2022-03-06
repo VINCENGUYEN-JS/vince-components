@@ -7,8 +7,8 @@ import Divider from "components/Divider/Divider";
 import { buttonAPI } from "../componentApi";
 
 const buttonCode = `<Button type="primary">Primary</Button>
-<Button type="primary size="large">Primary + Large</Button>Default</Button>
-<Button type="primary shape="round">Primary + Round</Button>Default</Button>
+<Button type="primary" size="large">Primary + Large</Button>Default</Button>
+<Button type="primary" shape="round">Primary + Round</Button>Default</Button>
 <Button type="primary" icon={<DownloadOutlined/>} shape="round" size="large">Download</Button>`;
 
 const ButtonExample = () => (
