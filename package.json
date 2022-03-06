@@ -1,6 +1,8 @@
 {
-  "name": "ant-design",
-  "version": "0.1.0",
+  "name": "vince-design",
+  "version": "1.0.0",
+  "description": "Easy to use, responsive and customizable components",
+  "license": "MIT",
   "private": true,
   "homepage": "https://VINCENGUYEN-JS.github.io/component-ants",
   "dependencies": {
