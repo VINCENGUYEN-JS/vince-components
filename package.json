@@ -1,9 +1,8 @@
 {
   "name": "vince-design",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Easy to use, responsive and customizable components",
   "license": "MIT",
-  "private": true,
   "keywords": [
     "vince",
     "components",
@@ -38,7 +37,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "clean": "rimraf dist",
+    "compile": "tsc --build \"./tsconfig.json\""
   },
   "eslintConfig": {
     "extends": [
