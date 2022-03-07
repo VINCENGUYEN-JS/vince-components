@@ -4,7 +4,7 @@ import classNames from "classnames";
 import { parseChildren } from "../../utils/nodeUtil";
 import "./style/index.scss";
 
-interface MenuProps extends React.HTMLAttributes<HTMLUListElement> {
+export interface MenuProps extends React.HTMLAttributes<HTMLUListElement> {
   children: React.ReactNode;
   key?: string;
   defaultSelectedKey?: string[];

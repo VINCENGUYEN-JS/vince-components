@@ -4,7 +4,21 @@
   "description": "Easy to use, responsive and customizable components",
   "license": "MIT",
   "private": true,
+  "keywords": [
+    "vince",
+    "components",
+    "design",
+    "framework",
+    "frontend",
+    "react",
+    "react-component",
+    "ui"
+  ],
   "homepage": "https://VINCENGUYEN-JS.github.io/component-ants",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VINCENGUYEN-JS/component-ants"
+  },
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "@testing-library/jest-dom": "^5.16.1",
@@ -13,8 +27,6 @@
     "classnames": "^2.3.1",
     "prismjs": "^1.27.0",
     "rc-util": "^5.12.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
     "sass": "^1.49.0",
@@ -49,6 +61,13 @@
   "devDependencies": {
     "@types/prismjs": "^1.26.0",
     "@types/react": "^17.0.38",
-    "gh-pages": "^3.2.3"
+    "gh-pages": "^3.2.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router": "^6.2.2"
+  },
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
   }
 }
