@@ -45,6 +45,15 @@ const gridCode = `<Row>
    <Col span={12}>
     <BorderBox>Col 12</BorderBox>
    </Col>
+</Row>
+
+<Row>
+  <Col span={6}>
+    <BorderBox>Col 6</BorderBox>
+  </Col>
+  <Col span={6} offset={6}>
+    <BorderBox>Col 6</BorderBox>
+  </Col>
 </Row>`;
 
 const GridExample = () => (
@@ -86,7 +95,7 @@ const GridExample = () => (
         </Col>
       </Row>
       <Divider>
-        Layout with responsive gutter xs: 8, sm: 16, md: 24, lg: 32{" "}
+        Layout with responsive gutter xs: 8, sm: 16, md: 24, lg: 32
       </Divider>
       <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
         <Col span={12}>
@@ -94,6 +103,15 @@ const GridExample = () => (
         </Col>
         <Col span={12}>
           <BorderBox>Col 12</BorderBox>
+        </Col>
+      </Row>
+      <Divider>Colum with offset</Divider>
+      <Row>
+        <Col span={6}>
+          <BorderBox>Col 6</BorderBox>
+        </Col>
+        <Col span={6} offset={6}>
+          <BorderBox>Col 6</BorderBox>
         </Col>
       </Row>
     </ComponentDoc>

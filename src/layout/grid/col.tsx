@@ -8,14 +8,16 @@ const prefixCls = "col";
 type ColProps = {
   children: React.ReactNode;
   span?: number;
+  offset?: number;
 };
 
 const Col = (props: ColProps) => {
-  const { children, span } = props;
+  const { children, span, offset } = props;
   const { gutter } = React.useContext(RowContext);
 
   const classes = classNames(prefixCls, {
     [`${prefixCls}-${span}`]: span !== undefined,
+    [`${prefixCls}-offset-${offset}`]: offset !== undefined,
   });
 
   const mergedStyle: React.CSSProperties = {};
@@ -24,6 +26,8 @@ const Col = (props: ColProps) => {
     mergedStyle.paddingLeft = gutter;
     mergedStyle.paddingRight = gutter;
   }
+
+  console.log({ classes });
 
   return (
     <div className={classes} style={{ ...mergedStyle }}>

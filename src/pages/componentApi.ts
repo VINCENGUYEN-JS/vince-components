@@ -108,6 +108,12 @@ const gridAPI: APIProps[][] = [
       type: "number",
       default: "none",
     },
+    {
+      property: "offset",
+      description: "The number of cells to offset Col from the left",
+      type: "number",
+      default: "0",
+    },
   ],
 ];
 

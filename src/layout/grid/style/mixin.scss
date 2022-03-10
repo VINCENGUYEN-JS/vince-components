@@ -8,6 +8,9 @@
       flex: 0 0 percentage(($count/$grid-columns));
     }
     $count: $count + 1;
+    .col-offset-#{$count} {
+      margin-left: percentage(($count/$grid-columns));
+    }
   }
 }
 
