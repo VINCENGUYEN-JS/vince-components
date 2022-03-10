@@ -16,6 +16,19 @@ const spaceCode = `<Space>
   <Button type="primary">Button</Button>
 </Space>`;
 
+const SpaceAlignBlock = ({ children }: { children: React.ReactNode }) => (
+  <div
+    style={{
+      flex: "none",
+      margin: "8px 4px",
+      padding: "4px",
+      border: "1px solid #40a9ff",
+    }}
+  >
+    {children}
+  </div>
+);
+
 const SpaceExample = () => {
   return (
     <ComponentDoc
@@ -34,6 +47,42 @@ const SpaceExample = () => {
         space
         <Button type="primary">Button</Button>
       </Space>
+      <Divider>[align]</Divider>
+
+      <div style={{ display: "flex", alignItems: "flexStart" }}>
+        <SpaceAlignBlock>
+          <Space>
+            center space
+            <Button type="primary" style={{ height: "100px" }}>
+              Button
+            </Button>
+          </Space>
+        </SpaceAlignBlock>
+        <SpaceAlignBlock>
+          <Space align="start">
+            start space
+            <Button type="primary" style={{ height: "100px" }}>
+              Button
+            </Button>
+          </Space>
+        </SpaceAlignBlock>
+        <SpaceAlignBlock>
+          <Space align="end">
+            end space
+            <Button type="primary" style={{ height: "100px" }}>
+              Button
+            </Button>
+          </Space>
+        </SpaceAlignBlock>
+        <SpaceAlignBlock>
+          <Space align="baseline">
+            baseline space
+            <Button type="primary" style={{ height: "100px" }}>
+              Button
+            </Button>
+          </Space>
+        </SpaceAlignBlock>
+      </div>
     </ComponentDoc>
   );
 };

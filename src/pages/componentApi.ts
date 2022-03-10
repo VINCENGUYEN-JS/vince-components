@@ -83,10 +83,17 @@ const resultAPI: APIProps[] = [
 
 const spaceAPI: APIProps[] = [
   {
+    title: "Space",
     property: "direction",
     description: "The space direction",
     type: "horizontal | vertical",
     default: "horizontal",
+  },
+  {
+    property: "align",
+    description: "The space align",
+    type: "start | end | center |baseline",
+    default: "center",
   },
 ];
 
