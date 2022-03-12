@@ -25,7 +25,8 @@
   "scripts": {
     "clean": "rimraf lib",
     "copy-files": "copyfiles -e **/*.ts -e **/*.tsx -u 1 src/**/*.scss lib/esm/components/src",
-    "tsc": "npm run clean && tsc -p tsconfig.json && tsc -p tsconfig-cjs.json && npm run copy-files"
+    "tsc": "npm run clean && tsc -p tsconfig.json && tsc -p tsconfig-cjs.json && npm run copy-files",
+    "format-code": "../../node_modules/.bin/prettier --single-quote --write \"src/**/*.{js,ts,jsx,tsx}\""
   },
   "author": "VINCE-NGUYEN",
   "license": "MIT",
