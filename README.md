@@ -1,10 +1,11 @@
-# Ant-components
+# Vince-components
 
-Mimic ant-components with sass
+Vince components for React.js
 
 # Play-ground
 
 https://VINCENGUYEN-JS.github.io/component-ants
 
 # Installation
-npm i vince-design
+
+npm i vince-components

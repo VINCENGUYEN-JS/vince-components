@@ -1,9 +1,19 @@
 {
   "name": "vince-components",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "Simple components library",
-  "module": "./lib/esm/components/index.js",
-  "main": "./lib/cjs/components/index.js",
+  "module": "./lib/esm/components/src/index.js",
+  "main": "./lib/cjs/components/src/index.js",
+  "keywords": [
+    "vince",
+    "components",
+    "design",
+    "framework",
+    "frontend",
+    "react",
+    "react-component",
+    "ui"
+  ],
   "files": [
     "lib/"
   ],
@@ -14,13 +24,15 @@
   },
   "scripts": {
     "clean": "rimraf lib",
-    "copy-files": "copyfiles -e **/*.ts -e **/*.tsx -u 1 src/**/*.scss lib/esm/src",
+    "copy-files": "copyfiles -e **/*.ts -e **/*.tsx -u 1 src/**/*.scss lib/esm/components/src",
     "tsc": "npm run clean && tsc -p tsconfig.json && tsc -p tsconfig-cjs.json && npm run copy-files"
   },
   "author": "VINCE-NGUYEN",
   "license": "MIT",
   "devDependencies": {
+    "@types/react": "^17.0.40",
     "css-loader": "^6.7.1",
+    "react": "^17.0.2",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
     "ts-loader": "^9.2.8",
@@ -29,5 +41,10 @@
   "peerDependencies": {
     "react": ">=16.9.0",
     "react-dom": ">=16.9.0"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "classnames": "^2.3.1",
+    "rc-util": "^5.19.3"
   }
 }
