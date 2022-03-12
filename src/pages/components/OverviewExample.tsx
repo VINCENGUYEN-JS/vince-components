@@ -1,10 +1,8 @@
-import * as React from "react";
-import { Link } from "react-router-dom";
+import * as React from 'react';
+import { Link } from 'react-router-dom';
 
-import ComponentDoc from "../../template/ComponentDoc";
-import { Divider, Input, Card, Tag, Row, Col, Space } from "@vince-components";
-
-console.log({ Row, Col, Space });
+import ComponentDoc from '../../template/ComponentDoc';
+import { Divider, Input, Card, Tag, Row, Col, Space } from '@vince-components';
 
 type TextWithSpaceProps = {
   title: string;
@@ -18,10 +16,10 @@ type CardLinkComponentProps = {
 };
 
 const styleImg = {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  height: "152px",
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  height: '152px',
 };
 
 const TextWithSpace = ({ title, quantity }: TextWithSpaceProps) => (
@@ -46,31 +44,36 @@ const CardLinkComponent = ({ src, to, title }: CardLinkComponentProps) => (
 const overviewComponents = {
   general: [
     {
-      to: "/button",
-      title: "Button",
-      src: "https://gw.alipayobjects.com/zos/alicdn/fNUKzY1sk/Button.svg",
+      key: 'button',
+      to: '/button',
+      title: 'Button',
+      src: 'https://gw.alipayobjects.com/zos/alicdn/fNUKzY1sk/Button.svg',
     },
   ],
   layouts: [
     {
-      to: "/divider",
-      title: "Divider",
-      src: "https://gw.alipayobjects.com/zos/alicdn/5swjECahe/Divider.svg",
+      key: 'divider',
+      to: '/divider',
+      title: 'Divider',
+      src: 'https://gw.alipayobjects.com/zos/alicdn/5swjECahe/Divider.svg',
     },
     {
-      to: "/grid",
-      title: "Grid",
-      src: "https://gw.alipayobjects.com/zos/alicdn/5rWLU27so/Grid.svg",
+      key: 'grid',
+      to: '/grid',
+      title: 'Grid',
+      src: 'https://gw.alipayobjects.com/zos/alicdn/5rWLU27so/Grid.svg',
     },
     {
-      to: "/layout",
-      title: "Layout",
-      src: "https://gw.alipayobjects.com/zos/alicdn/5swjECahe/Divider.svg",
+      key: 'layout',
+      to: '/layout',
+      title: 'Layout',
+      src: 'https://gw.alipayobjects.com/zos/alicdn/5swjECahe/Divider.svg',
     },
     {
-      to: "/space",
-      title: "Space",
-      src: "https://gw.alipayobjects.com/zos/antfincdn/wc6%263gJ0Y8/Space.svg",
+      key: 'space',
+      to: '/space',
+      title: 'Space',
+      src: 'https://gw.alipayobjects.com/zos/antfincdn/wc6%263gJ0Y8/Space.svg',
     },
   ],
 };
@@ -90,7 +93,7 @@ const Overview = () => {
         <TextWithSpace title="General" quantity={1} />
         <Row gutter={12}>
           {generalComponents.map((general) => (
-            <Col span={6}>
+            <Col key={general.key} span={6}>
               <CardLinkComponent {...general} />
             </Col>
           ))}
@@ -98,7 +101,7 @@ const Overview = () => {
         <TextWithSpace title="Layout" quantity={4} />
         <Row gutter={12}>
           {layoutComponents.map((layout) => (
-            <Col span={6}>
+            <Col key={layout.key} span={6}>
               <CardLinkComponent {...layout} />
             </Col>
           ))}

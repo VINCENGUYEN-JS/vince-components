@@ -1,11 +1,11 @@
-import * as React from "react";
-import { Routes, Route, Link, useNavigate, Navigate } from "react-router-dom";
+import * as React from 'react';
+import { Routes, Route, Link, useNavigate, Navigate } from 'react-router-dom';
 
-import useDocument from "./useDocument";
-import routes, { CustomRouteObject } from "./routes";
-import NotFound from "./template/NotFound";
-import { Menu, Input, Layout, Row, Col } from "@vince-components";
-import "./pages/style/index.scss";
+import useDocument from './useDocument';
+import routes, { CustomRouteObject } from './routes';
+import NotFound from './template/NotFound';
+import { Menu, Input, Layout, Row, Col } from '@vince-components';
+import './pages/style/index.scss';
 
 type NavProps = {
   userSearch: string;
@@ -13,19 +13,19 @@ type NavProps = {
 };
 
 const filterFn = (routes: CustomRouteObject[]) => (componentType: string) => {
-  if (componentType === "components") {
+  if (componentType === 'components') {
     const supportedComponents = [
-      "card",
-      "button",
-      "divider",
-      "menu",
-      "input",
-      "result",
-      "tag",
+      'card',
+      'button',
+      'divider',
+      'menu',
+      'input',
+      'result',
+      'tag',
     ];
     return routes.filter((route) => supportedComponents.includes(route.key));
   } else {
-    const supportedLayouts = ["grid", "layout", "space"];
+    const supportedLayouts = ['grid', 'layout', 'space'];
     return routes.filter((route) => supportedLayouts.includes(route.key));
   }
 };
@@ -35,13 +35,13 @@ const MenuItemGroup = Menu.ItemGroup;
 
 const SideBar = (props: { appRoutes: CustomRouteObject[] }) => {
   const { appRoutes } = props;
-  const componentTitle = "components";
-  const layoutTitle = "layouts";
+  const componentTitle = 'components';
+  const layoutTitle = 'layouts';
   let itemKeyForComponent = 11;
   let itemKeyForLayouts = 21;
   const selectedRoute = filterFn(appRoutes);
   return (
-    <Menu mode="inline" defaultSelectedKey={["1"]}>
+    <Menu mode="inline" defaultSelectedKey={['1']}>
       <MenuItem key="1">
         <Link to="/overview"> Overview</Link>
       </MenuItem>
@@ -94,7 +94,7 @@ const Nav = (props: NavProps) => {
 
 function App() {
   const [appRoutes, setAppRoutes] = React.useState<CustomRouteObject[]>(routes);
-  const [userSearch, setUserSearch] = React.useState<string>("");
+  const [userSearch, setUserSearch] = React.useState<string>('');
 
   useDocument();
 
@@ -118,16 +118,16 @@ function App() {
         </Layout.Header>
         <Layout
           style={{
-            minHeight: "100vh",
-            padding: "40px 0 0",
-            background: "#fff",
+            minHeight: '100vh',
+            padding: '40px 0 0',
+            background: '#fff',
           }}
         >
-          <Layout.Sider style={{ background: "#fff" }}>
+          <Layout.Sider style={{ background: '#fff' }}>
             <SideBar appRoutes={appRoutes} />
           </Layout.Sider>
           <Layout.Content>
-            <div style={{ paddingLeft: "64px" }}>
+            <div style={{ paddingLeft: '64px' }}>
               <Routes>
                 <Route path="/" element={<Navigate to="/overview" />} />
                 <Route
@@ -135,7 +135,11 @@ function App() {
                   element={<Navigate to="/overview" />}
                 />
                 {routes.map((route) => (
-                  <Route path={route.path} element={route.element} />
+                  <Route
+                    path={route.path}
+                    key={route.path}
+                    element={route.element}
+                  />
                 ))}
                 <Route path="*" element={<NotFound />} />
               </Routes>

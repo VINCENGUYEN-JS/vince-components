@@ -1,11 +1,13 @@
-import * as React from "react";
-import classNames from "classnames";
+import * as React from 'react';
+import classNames from 'classnames';
 
-import "./style/index.scss";
+import './style/index.scss';
 
-interface TagProps extends React.HTMLAttributes<HTMLSpanElement> {}
+interface TagProps extends React.HTMLAttributes<HTMLSpanElement> {
+  children?: React.ReactNode;
+}
 
-const prefixCls = "tag";
+const prefixCls = 'tag';
 
 const Tag = (props: TagProps) => {
   const { children, className } = props;

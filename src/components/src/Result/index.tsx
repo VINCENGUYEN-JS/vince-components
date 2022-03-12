@@ -1,8 +1,9 @@
-import * as React from "react";
-import classNames from "classnames";
+/* eslint-disable @typescript-eslint/no-extra-non-null-assertion */
+import * as React from 'react';
+import classNames from 'classnames';
 
-import NoFound from "./noFound";
-import "./style/index.scss";
+import NoFound from './noFound';
+import './style/index.scss';
 
 type ResultProps = {
   icon?: React.ReactNode;
@@ -13,14 +14,14 @@ type ResultProps = {
   children?: React.ReactNode;
 };
 
-type ExceptionStatusType = "403" | "404" | "500";
+type ExceptionStatusType = '403' | '404' | '500';
 
 type ExceptionMapType = Partial<Record<ExceptionStatusType, React.FC<any>>>;
 
-const prefixCls = "result";
+const prefixCls = 'result';
 
 const ExceptionMap: ExceptionMapType = {
-  "404": NoFound,
+  '404': NoFound,
 };
 
 const ExceptionStatus = Object.keys(ExceptionMap);
@@ -28,6 +29,7 @@ const ExceptionStatus = Object.keys(ExceptionMap);
 const renderIcon = (prefixCls: string, { status, icon }: ResultProps) => {
   const className = classNames(`${prefixCls}-icon`);
   if (ExceptionStatus.includes(`${status}`)) {
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     const SVGComponent = ExceptionMap[status as ExceptionStatusType]!!;
     return (
       <div className={`${className} ${prefixCls}-image`}>

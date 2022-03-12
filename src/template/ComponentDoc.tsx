@@ -1,11 +1,11 @@
-import * as React from "react";
-import PlusOutlined from "@ant-design/icons/PlusOutlined";
-import MinusOutlined from "@ant-design/icons/MinusOutlined";
+import * as React from 'react';
+import PlusOutlined from '@ant-design/icons/PlusOutlined';
+import MinusOutlined from '@ant-design/icons/MinusOutlined';
 
-import Code from "./Code";
-import classNames from "classnames";
-import { Space } from "@vince-components";
-import "./style/index.scss";
+import Code from './Code';
+import classNames from 'classnames';
+import { Space } from '@vince-components';
+import './style/index.scss';
 
 type APIProps = {
   property: string;
@@ -25,7 +25,7 @@ type ComponentDocProps = {
 };
 function isObject(obj: any) {
   return (
-    obj != null && obj.constructor.name === "Object" && !Array.isArray(obj)
+    obj != null && obj.constructor.name === 'Object' && !Array.isArray(obj)
   );
 }
 
@@ -54,7 +54,7 @@ const ComponentDoc = (props: ComponentDocProps) => {
           <tbody>
             {(api as APIProps[]).map((data) => {
               return (
-                <tr>
+                <tr key={data.description}>
                   <td>{data.property}</td>
                   <td>{data.description}</td>
                   <td>{data.type}</td>

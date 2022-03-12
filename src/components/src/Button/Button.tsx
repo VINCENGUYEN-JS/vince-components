@@ -1,21 +1,21 @@
-import * as React from "react";
-import classNames from "classnames";
-import "./style/index.scss";
+import * as React from 'react';
+import classNames from 'classnames';
+import './style/index.scss';
 
 type ButtonType =
-  | "default"
-  | "primary"
-  | "ghost"
-  | "dashed"
-  | "link"
-  | "text"
+  | 'default'
+  | 'primary'
+  | 'ghost'
+  | 'dashed'
+  | 'link'
+  | 'text'
   | undefined;
 
-type SizeType = "small" | "middle" | "large" | undefined;
+type SizeType = 'small' | 'middle' | 'large' | undefined;
 
-type ButtonShape = "default" | "circle" | "round";
+type ButtonShape = 'default' | 'circle' | 'round';
 
-type ButtonHTMLType = "submit" | "button" | "reset";
+type ButtonHTMLType = 'submit' | 'button' | 'reset';
 
 type BaseButtonProps = {
   type: ButtonType;
@@ -31,11 +31,11 @@ type NativeButtonProps = {
   htmlType?: ButtonHTMLType;
   onClick?: React.MouseEventHandler<HTMLElement>;
 } & BaseButtonProps &
-  Omit<React.ButtonHTMLAttributes<any>, "type" | "onClick">;
+  Omit<React.ButtonHTMLAttributes<any>, 'type' | 'onClick'>;
 
-const prefixCls = "button";
+const prefixCls = 'button';
 
-const sizeClassNameMap = { large: "lg", small: "sm", middle: "md" };
+const sizeClassNameMap = { large: 'lg', small: 'sm', middle: 'md' };
 
 const Button = React.forwardRef<HTMLButtonElement, NativeButtonProps>(
   (props, ref) => {
@@ -45,16 +45,16 @@ const Button = React.forwardRef<HTMLButtonElement, NativeButtonProps>(
       icon,
       onClick,
       size: customizeSize,
-      shape = "default",
+      shape = 'default',
       ...rest
     } = props;
-    const sizeCls = customizeSize ? sizeClassNameMap[customizeSize] : "";
+    const sizeCls = customizeSize ? sizeClassNameMap[customizeSize] : '';
     const iconType = icon;
     const classes = classNames(prefixCls, {
       [`${prefixCls}-${type}`]: type,
       [`${prefixCls}-${sizeCls}`]: sizeCls,
       [`${prefixCls}-icon-only`]: !children && children !== 0 && !!iconType,
-      [`${prefixCls}-${shape}`]: shape !== "default" && shape,
+      [`${prefixCls}-${shape}`]: shape !== 'default' && shape,
     });
 
     return (
@@ -65,5 +65,7 @@ const Button = React.forwardRef<HTMLButtonElement, NativeButtonProps>(
     );
   }
 );
+
+Button.displayName = 'Button';
 
 export default Button;

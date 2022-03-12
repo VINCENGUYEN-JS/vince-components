@@ -1,19 +1,19 @@
-export type Breakpoint = "xxl" | "xl" | "lg" | "md" | "sm" | "xs";
+export type Breakpoint = 'xxl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs';
 export type BreakpointMap = Record<Breakpoint, string>;
 export type ScreenMap = Partial<Record<Breakpoint, boolean>>;
 
 type SubcribeFn = (screens: ScreenMap) => void;
 
 const responsiveMap: BreakpointMap = {
-  xs: "(max-width: 575px)",
-  sm: "(min-width:576px)",
-  md: "(min-width:768px)",
-  lg: "(min-width:992px)",
-  xl: "(min-width:1200px)",
-  xxl: "(min-width:1600px)",
+  xs: '(max-width: 575px)',
+  sm: '(min-width:576px)',
+  md: '(min-width:768px)',
+  lg: '(min-width:992px)',
+  xl: '(min-width:1200px)',
+  xxl: '(min-width:1600px)',
 };
 
-const subscribers = new Map<Number, SubcribeFn>();
+const subscribers = new Map<number, SubcribeFn>();
 
 let subUid = -1;
 let screens = {};

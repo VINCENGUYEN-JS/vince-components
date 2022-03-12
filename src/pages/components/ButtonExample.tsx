@@ -1,9 +1,9 @@
-import * as React from "react";
-import { DownloadOutlined } from "@ant-design/icons";
+import * as React from 'react';
+import { DownloadOutlined } from '@ant-design/icons';
 
-import ComponentDoc from "../../template/ComponentDoc";
-import { buttonAPI } from "../componentApi";
-import { Button, Divider } from "@vince-components";
+import ComponentDoc from '../../template/ComponentDoc';
+import { buttonAPI } from '../componentApi';
+import { Button, Divider } from '@vince-components';
 
 const buttonCode = `<Button type="primary">Primary</Button>
 <Button type="primary" size="large">Primary + Large</Button>Default</Button>
@@ -29,15 +29,15 @@ const ButtonExample = () => (
       </Button>
       <Divider orientation="left">Button With Primary + Round</Divider>
       <Button type="primary" shape="round">
-        I'm Round
+        I&apos;m Round
       </Button>
       <Divider orientation="left">Button With Primary + Round + Large</Divider>
       <Button type="primary" shape="round" size="large">
-        I'm Round And Large
+        I&apos;m Round And Large
       </Button>
       <Divider orientation="left">Button With Primary + Circle + Large</Divider>
       <Button type="primary" shape="circle" size="large">
-        I'm Circle And Large
+        I&apos;m Circle And Large
       </Button>
       <Divider orientation="left">
         Button With Primary + Round + Large + Icon
