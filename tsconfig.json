@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",
+    "baseUrl": ".",
+    "paths": {
+      "@vince-components": ["src/components/src"]
+    },
     "jsx": "react",
     "lib": ["es6", "dom"],
     "rootDir": "src",

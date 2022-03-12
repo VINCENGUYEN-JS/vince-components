@@ -1,8 +1,7 @@
 import * as React from "react";
 
-import ComponentDoc from "template/ComponentDoc";
-import Divider from "components/Divider/Divider";
-import Input from "components/Input";
+import ComponentDoc from "../../template/ComponentDoc";
+import { Divider, Input } from "@vince-components";
 import { inputAPI } from "../componentApi";
 
 const inputCode = `<Input placeholder="Basic Usage" />

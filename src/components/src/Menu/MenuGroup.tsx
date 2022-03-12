@@ -1,7 +1,7 @@
 import * as React from "react";
 import classNames from "classnames";
 
-import { parseChildren } from "../../utils/nodeUtil";
+import { parseChildren } from "../../../utils/nodeUtil";
 
 type MenuItemGroupProps = {
   title?: React.ReactNode;

@@ -3,7 +3,7 @@ import classNames from "classnames";
 
 import type { RenderIconType } from "../interface";
 import Icon from "../Icon";
-import { parseChildren } from "../../../utils/nodeUtil";
+import { parseChildren } from "../../../../utils/nodeUtil";
 
 type SubMenuProps = {
   className?: string;

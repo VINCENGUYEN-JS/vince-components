@@ -35,7 +35,7 @@ type NativeButtonProps = {
 
 const prefixCls = "button";
 
-const sizeClassNameMap = { large: "lg", small: "sm", middle: undefined };
+const sizeClassNameMap = { large: "lg", small: "sm", middle: "md" };
 
 const Button = React.forwardRef<HTMLButtonElement, NativeButtonProps>(
   (props, ref) => {

@@ -1,9 +1,12 @@
 import * as React from "react";
 
-import ComponentDoc from "template/ComponentDoc";
-import Divider from "components/Divider/Divider";
-import Menu, { MenuItem, MenuItemGroup, SubMenu } from "components/Menu";
+import ComponentDoc from "../../template/ComponentDoc";
+import { Menu, Divider } from "@vince-components";
 import { menuAPI } from "../componentApi";
+
+const MenuItem = Menu.Item;
+const MenuItemGroup = Menu.ItemGroup;
+const SubMenu = Menu.SubMenu;
 
 const getSvgIcon = (style = {}) => {
   const path =

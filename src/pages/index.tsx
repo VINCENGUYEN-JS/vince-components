@@ -1,4 +1,4 @@
-//component pages
+// component pages
 export { default as ButtonExample } from "./components/ButtonExample";
 export { default as DividerExample } from "./components/DividerExample";
 export { default as MenuExample } from "./components/MenuExample";

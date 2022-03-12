@@ -1,12 +1,11 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 
-import ComponentDoc from "template/ComponentDoc";
-import Divider from "components/Divider/Divider";
-import Input from "components/Input";
-import Card from "components/Card";
-import Tag from "components/Tag";
-import { Row, Col, Space } from "layout";
+import ComponentDoc from "../../template/ComponentDoc";
+import { Divider, Input, Card, Tag } from "@vince-components";
+import { Row, Col, Space } from "../../layout";
+
+console.log({ Row, Col, Space });
 
 type TextWithSpaceProps = {
   title: string;

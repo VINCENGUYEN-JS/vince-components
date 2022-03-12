@@ -1,7 +1,7 @@
 import * as React from "react";
 
-import ComponentDoc from "template/ComponentDoc";
-import Divider from "components/Divider/Divider";
+import ComponentDoc from "../../template/ComponentDoc";
+import { Divider } from "@vince-components";
 import { dividerAPI } from "../componentApi";
 
 const dividerCode = `<Divider>Hello </Divider>

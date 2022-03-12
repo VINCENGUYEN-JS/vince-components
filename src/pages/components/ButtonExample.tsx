@@ -1,10 +1,9 @@
 import * as React from "react";
 import { DownloadOutlined } from "@ant-design/icons";
 
-import ComponentDoc from "template/ComponentDoc";
-import Button from "components/Button/Button";
-import Divider from "components/Divider/Divider";
+import ComponentDoc from "../../template/ComponentDoc";
 import { buttonAPI } from "../componentApi";
+import { Button, Divider } from "@vince-components";
 
 const buttonCode = `<Button type="primary">Primary</Button>
 <Button type="primary" size="large">Primary + Large</Button>Default</Button>

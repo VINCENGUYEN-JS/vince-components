@@ -4,9 +4,8 @@ import { Routes, Route, Link, useNavigate, Navigate } from "react-router-dom";
 import useDocument from "./useDocument";
 import { Layout, Row, Col } from "./layout";
 import routes, { CustomRouteObject } from "./routes";
-import Menu, { MenuItem, MenuItemGroup } from "./components/Menu";
+import { Menu, Input } from "@vince-components";
 import NotFound from "./template/NotFound";
-import Input from "./components/Input";
 import "./pages/style/index.scss";
 
 type NavProps = {
@@ -31,6 +30,9 @@ const filterFn = (routes: CustomRouteObject[]) => (componentType: string) => {
     return routes.filter((route) => supportedLayouts.includes(route.key));
   }
 };
+
+const MenuItem = Menu.Item;
+const MenuItemGroup = Menu.ItemGroup;
 
 const SideBar = (props: { appRoutes: CustomRouteObject[] }) => {
   const { appRoutes } = props;

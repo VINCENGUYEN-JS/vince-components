@@ -1,9 +1,7 @@
 import * as React from "react";
 
-import ComponentDoc from "template/ComponentDoc";
-import Divider from "components/Divider/Divider";
-import Button from "components/Button/Button";
-import Result from "components/Result";
+import ComponentDoc from "../../template/ComponentDoc";
+import { Button, Divider, Result } from "@vince-components";
 import { resultAPI } from "../componentApi";
 
 const resultCode = `<Result status="404" title="404" subTitle="Sorry , the page you visited does not exist" extra={<Button type="primary">BackHome</Button>} />`;
