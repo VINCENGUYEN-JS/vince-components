@@ -2,9 +2,9 @@
 
 Vince components for React.js
 
-# Play-ground
+# How to use
 
-https://VINCENGUYEN-JS.github.io/component-ants
+https://vincenguyen-js.github.io/vince-components/
 
 # Installation
 
