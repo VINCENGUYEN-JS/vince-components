@@ -2,8 +2,7 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 
 import ComponentDoc from "../../template/ComponentDoc";
-import { Divider, Input, Card, Tag } from "@vince-components";
-import { Row, Col, Space } from "../../layout";
+import { Divider, Input, Card, Tag, Row, Col, Space } from "@vince-components";
 
 console.log({ Row, Col, Space });
 

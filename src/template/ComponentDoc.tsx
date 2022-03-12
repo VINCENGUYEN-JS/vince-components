@@ -3,8 +3,8 @@ import PlusOutlined from "@ant-design/icons/PlusOutlined";
 import MinusOutlined from "@ant-design/icons/MinusOutlined";
 
 import Code from "./Code";
-import { Space } from "../layout";
 import classNames from "classnames";
+import { Space } from "@vince-components";
 import "./style/index.scss";
 
 type APIProps = {

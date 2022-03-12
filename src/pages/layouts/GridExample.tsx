@@ -1,9 +1,8 @@
 import * as React from "react";
 
 import ComponentDoc from "../../template/ComponentDoc";
-import { Row, Col } from "../../layout";
-import { Divider } from "@vince-components";
 import { gridAPI } from "../../pages/componentApi";
+import { Divider, Row, Col } from "@vince-components";
 
 const BorderBox = (props: any) => (
   <div

@@ -2,10 +2,9 @@ import * as React from "react";
 import { Routes, Route, Link, useNavigate, Navigate } from "react-router-dom";
 
 import useDocument from "./useDocument";
-import { Layout, Row, Col } from "./layout";
 import routes, { CustomRouteObject } from "./routes";
-import { Menu, Input } from "@vince-components";
 import NotFound from "./template/NotFound";
+import { Menu, Input, Layout, Row, Col } from "@vince-components";
 import "./pages/style/index.scss";
 
 type NavProps = {

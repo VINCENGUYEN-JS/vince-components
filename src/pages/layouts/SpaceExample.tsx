@@ -1,9 +1,8 @@
 import * as React from "react";
 
-import { Space } from "../../layout";
 import ComponentDoc from "../../template/ComponentDoc";
-import { Button, Divider } from "@vince-components";
 import { spaceAPI } from "../componentApi";
+import { Button, Divider, Space } from "@vince-components";
 
 const spaceCode = `<Space>
   space

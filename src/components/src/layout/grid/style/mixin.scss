@@ -1,4 +1,4 @@
-@use "../../../components/src/style/variable.scss" as *;
+@use "../../../style/variable.scss" as *;
 
 @mixin loop-grid-columns() {
   $count: 0;
