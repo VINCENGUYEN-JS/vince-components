@@ -1,11 +1,11 @@
-import * as React from "react";
-import classNames from "classnames";
+import * as React from 'react';
+import classNames from 'classnames';
 
-import "./style/index.scss";
+import './style/index.scss';
 
 type GeneratorProps = {
   prefixCls: string;
-  tagName: "header" | "footer" | "main" | "section";
+  tagName: 'header' | 'footer' | 'main' | 'section';
   displayName: string;
 };
 
@@ -15,7 +15,7 @@ export interface BasicProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 type BasicPropsWithTagName = BasicProps & {
-  tagName: "header" | "footer" | "main" | "section";
+  tagName: 'header' | 'footer' | 'main' | 'section';
 };
 
 type LayoutContextProps = {
@@ -72,7 +72,7 @@ const BasicLayout = (props: BasicPropsWithTagName) => {
 
   const classes = classNames(prefixCls, {
     [`${prefixCls}-has-sider`]:
-      typeof hasSider === "boolean" ? hasSider : siders.length > 0,
+      typeof hasSider === 'boolean' ? hasSider : siders.length > 0,
   });
 
   return (
@@ -85,27 +85,27 @@ const BasicLayout = (props: BasicPropsWithTagName) => {
 };
 
 const Layout = generator({
-  prefixCls: "layout",
-  tagName: "section",
-  displayName: "Layout",
+  prefixCls: 'layout',
+  tagName: 'section',
+  displayName: 'Layout',
 })(BasicLayout);
 
 const Header = generator({
-  prefixCls: "layout-header",
-  tagName: "header",
-  displayName: "Header",
+  prefixCls: 'layout-header',
+  tagName: 'header',
+  displayName: 'Header',
 })(Basic);
 
 const Footer = generator({
-  prefixCls: "layout-footer",
-  tagName: "footer",
-  displayName: "Footer",
+  prefixCls: 'layout-footer',
+  tagName: 'footer',
+  displayName: 'Footer',
 })(Basic);
 
 const Content = generator({
-  prefixCls: "layout-content",
-  tagName: "main",
-  displayName: "Content",
+  prefixCls: 'layout-content',
+  tagName: 'main',
+  displayName: 'Content',
 })(Basic);
 
 export { Header, Footer, Content };

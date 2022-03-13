@@ -1,16 +1,16 @@
-import * as React from "react";
-import classNames from "classnames";
+import * as React from 'react';
+import classNames from 'classnames';
 
-import "./style/index.scss";
+import './style/index.scss';
 
 interface CardProps
-  extends Omit<React.HTMLAttributes<HTMLDivElement>, "title"> {
+  extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
   title?: React.ReactNode;
   extra?: React.ReactNode;
   bordered?: boolean;
 }
 
-const prefixCls = "card";
+const prefixCls = 'card';
 
 const Card = (props: CardProps) => {
   const { children, className, title, extra, bordered = true, style } = props;

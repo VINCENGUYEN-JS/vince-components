@@ -1,5 +1,5 @@
-import * as React from "react";
-import toArray from "rc-util/lib/Children/toArray";
+import * as React from 'react';
+import toArray from 'rc-util/lib/Children/toArray';
 
 export function parseChildren(children: React.ReactNode, keyPath: string[]) {
   return toArray(children).map((child, index) => {
@@ -10,7 +10,7 @@ export function parseChildren(children: React.ReactNode, keyPath: string[]) {
       const emptyKey = eventKey === null || eventKey === undefined;
 
       if (emptyKey) {
-        eventKey = `tmp_key-${[...keyPath, index].join("-")}`;
+        eventKey = `tmp_key-${[...keyPath, index].join('-')}`;
       }
 
       const cloneProps = {
@@ -18,7 +18,7 @@ export function parseChildren(children: React.ReactNode, keyPath: string[]) {
         eventKey,
       } as any;
 
-      if (process.env.NODE_ENV !== "production" && emptyKey) {
+      if (process.env.NODE_ENV !== 'production' && emptyKey) {
         cloneProps.warnKey = true;
       }
 

@@ -1,18 +1,18 @@
-import * as React from "react";
-import classNames from "classnames";
+import * as React from 'react';
+import classNames from 'classnames';
 
-import "./style/index.scss";
+import './style/index.scss';
 
-const prefixCls = "divider";
+const prefixCls = 'divider';
 
 type DividerProps = {
   children?: React.ReactNode;
-  type?: "horizontal" | "vertical";
-  orientation?: "left" | "right" | "center";
+  type?: 'horizontal' | 'vertical';
+  orientation?: 'left' | 'right' | 'center';
 };
 
 const Divider = (props: DividerProps) => {
-  const { children, type = "horizontal", orientation = "center" } = props;
+  const { children, type = 'horizontal', orientation = 'center' } = props;
   const hasChildren = !!children;
   const classes = classNames(prefixCls, {
     [`${prefixCls}-${type}`]: type,

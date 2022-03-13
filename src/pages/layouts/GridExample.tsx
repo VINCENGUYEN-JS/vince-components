@@ -1,15 +1,15 @@
-import * as React from "react";
+import * as React from 'react';
 
-import ComponentDoc from "../../template/ComponentDoc";
-import { gridAPI } from "../../pages/componentApi";
-import { Divider, Row, Col } from "@vince-components";
+import ComponentDoc from '../../template/ComponentDoc';
+import { gridAPI } from '../../pages/componentApi';
+import { Divider, Row, Col } from '@vince-components';
 
 const BorderBox = (props: any) => (
   <div
     style={{
-      border: "1px solid #ccc",
-      backgroundColor: "rgb(0, 146, 255)",
-      padding: "10px",
+      border: '1px solid #ccc',
+      backgroundColor: 'rgb(0, 146, 255)',
+      padding: '10px',
     }}
   >
     {props.children}

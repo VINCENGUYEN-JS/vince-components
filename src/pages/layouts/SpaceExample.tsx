@@ -1,8 +1,8 @@
-import * as React from "react";
+import * as React from 'react';
 
-import ComponentDoc from "../../template/ComponentDoc";
-import { spaceAPI } from "../componentApi";
-import { Button, Divider, Space } from "@vince-components";
+import ComponentDoc from '../../template/ComponentDoc';
+import { spaceAPI } from '../componentApi';
+import { Button, Divider, Space } from '@vince-components';
 
 const spaceCode = `<Space>
   space
@@ -17,10 +17,10 @@ const spaceCode = `<Space>
 const SpaceAlignBlock = ({ children }: { children: React.ReactNode }) => (
   <div
     style={{
-      flex: "none",
-      margin: "8px 4px",
-      padding: "4px",
-      border: "1px solid #40a9ff",
+      flex: 'none',
+      margin: '8px 4px',
+      padding: '4px',
+      border: '1px solid #40a9ff',
     }}
   >
     {children}
@@ -47,11 +47,11 @@ const SpaceExample = () => {
       </Space>
       <Divider>[align]</Divider>
 
-      <div style={{ display: "flex", alignItems: "flexStart" }}>
+      <div style={{ display: 'flex', alignItems: 'flexStart' }}>
         <SpaceAlignBlock>
           <Space>
             center space
-            <Button type="primary" style={{ height: "100px" }}>
+            <Button type="primary" style={{ height: '100px' }}>
               Button
             </Button>
           </Space>
@@ -59,7 +59,7 @@ const SpaceExample = () => {
         <SpaceAlignBlock>
           <Space align="start">
             start space
-            <Button type="primary" style={{ height: "100px" }}>
+            <Button type="primary" style={{ height: '100px' }}>
               Button
             </Button>
           </Space>
@@ -67,7 +67,7 @@ const SpaceExample = () => {
         <SpaceAlignBlock>
           <Space align="end">
             end space
-            <Button type="primary" style={{ height: "100px" }}>
+            <Button type="primary" style={{ height: '100px' }}>
               Button
             </Button>
           </Space>
@@ -75,7 +75,7 @@ const SpaceExample = () => {
         <SpaceAlignBlock>
           <Space align="baseline">
             baseline space
-            <Button type="primary" style={{ height: "100px" }}>
+            <Button type="primary" style={{ height: '100px' }}>
               Button
             </Button>
           </Space>

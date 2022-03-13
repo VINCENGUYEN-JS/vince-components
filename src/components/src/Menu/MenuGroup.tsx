@@ -1,13 +1,13 @@
-import * as React from "react";
+import * as React from 'react';
 
-import { parseChildren } from "../../../utils/nodeUtil";
+import { parseChildren } from '../../../utils/nodeUtil';
 
 type MenuItemGroupProps = {
   title?: React.ReactNode;
   children?: React.ReactNode;
 };
 
-const prefixCls = "menu-item-group";
+const prefixCls = 'menu-item-group';
 
 const MenuItemGroup = (props: MenuItemGroupProps) => {
   const { children, title } = props;

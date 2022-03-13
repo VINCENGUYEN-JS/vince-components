@@ -1,8 +1,8 @@
-import * as React from "react";
+import * as React from 'react';
 
-import ComponentDoc from "../../template/ComponentDoc";
-import { Menu, Divider } from "@vince-components";
-import { menuAPI } from "../componentApi";
+import ComponentDoc from '../../template/ComponentDoc';
+import { Menu, Divider } from '@vince-components';
+import { menuAPI } from '../componentApi';
 
 const MenuItem = Menu.Item;
 const MenuItemGroup = Menu.ItemGroup;
@@ -10,10 +10,10 @@ const SubMenu = Menu.SubMenu;
 
 const getSvgIcon = (style = {}) => {
   const path =
-    "M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h" +
-    "-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v" +
-    "60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91" +
-    ".5c1.9 0 3.8-0.7 5.2-2L869 536.2c14.7-12.8 14.7-35.6 0-48.4z";
+    'M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h' +
+    '-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v' +
+    '60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91' +
+    '.5c1.9 0 3.8-0.7 5.2-2L869 536.2c14.7-12.8 14.7-35.6 0-48.4z';
   return (
     <i style={style}>
       <svg
@@ -21,7 +21,7 @@ const getSvgIcon = (style = {}) => {
         width="1em"
         height="1em"
         fill="currentColor"
-        style={{ verticalAlign: "-.125em" }}
+        style={{ verticalAlign: '-.125em' }}
       >
         <path d={path} />
       </svg>
@@ -31,9 +31,9 @@ const getSvgIcon = (style = {}) => {
 
 function itemIcon(props: any) {
   return getSvgIcon({
-    position: "absolute",
-    right: "1rem",
-    color: props.isSelected ? "pink" : "inherit",
+    position: 'absolute',
+    right: '1rem',
+    color: props.isSelected ? 'pink' : 'inherit',
   });
 }
 

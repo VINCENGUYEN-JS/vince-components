@@ -1,5 +1,5 @@
-import InternalInput, { InputProps } from "./Input";
-import Search from "./Search";
+import InternalInput, { InputProps } from './Input';
+import Search from './Search';
 
 type InputComposition = React.FC<InputProps> & { Search: typeof Search };
 

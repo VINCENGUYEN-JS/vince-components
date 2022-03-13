@@ -1,8 +1,8 @@
-import * as React from "react";
+import * as React from 'react';
 
-import ComponentDoc from "../../template/ComponentDoc";
-import { Divider } from "@vince-components";
-import { dividerAPI } from "../componentApi";
+import ComponentDoc from '../../template/ComponentDoc';
+import { Divider } from '@vince-components';
+import { dividerAPI } from '../componentApi';
 
 const dividerCode = `<Divider>Hello </Divider>
 <Divider orientation="left">Hello </Divider>`;

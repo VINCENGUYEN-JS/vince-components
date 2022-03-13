@@ -1,16 +1,16 @@
-import * as React from "react";
-import classNames from "classnames";
-import toArray from "rc-util/lib/Children/toArray";
+import * as React from 'react';
+import classNames from 'classnames';
+import toArray from 'rc-util/lib/Children/toArray';
 
-import Item from "./Item";
-import "./style/index.scss";
+import Item from './Item';
+import './style/index.scss';
 
-const prefixCls = "space";
+const prefixCls = 'space';
 
 interface SpaceProps extends React.HTMLAttributes<HTMLDivElement> {
-  align?: "start" | "end" | "center" | "baseline";
-  direction?: "horizontal" | "vertical";
-  size?: "small" | "middle" | "large";
+  align?: 'start' | 'end' | 'center' | 'baseline';
+  direction?: 'horizontal' | 'vertical';
+  size?: 'small' | 'middle' | 'large';
 }
 
 const spaceSize = {
@@ -20,7 +20,7 @@ const spaceSize = {
 };
 
 function getNumberSize(size: keyof typeof spaceSize) {
-  return typeof size === "string" ? spaceSize[size] : size || 0;
+  return typeof size === 'string' ? spaceSize[size] : size || 0;
 }
 
 const Space = (props: SpaceProps) => {
@@ -28,12 +28,12 @@ const Space = (props: SpaceProps) => {
     children,
     className,
     align,
-    direction = "horizontal",
+    direction = 'horizontal',
     style: customStyle,
-    size = "small",
+    size = 'small',
   } = props;
   const mergedAlign =
-    align === undefined && direction === "horizontal" ? "center" : align;
+    align === undefined && direction === 'horizontal' ? 'center' : align;
   const classes = classNames(
     prefixCls,
     `${prefixCls}-${direction}`,

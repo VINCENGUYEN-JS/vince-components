@@ -1,8 +1,8 @@
-import * as React from "react";
+import * as React from 'react';
 
-import { Tag } from "@vince-components";
-import ComponentDoc from "../../template/ComponentDoc";
-import { tagAPI } from "../componentApi";
+import { Tag } from '@vince-components';
+import ComponentDoc from '../../template/ComponentDoc';
+import { tagAPI } from '../componentApi';
 
 const tagCode = `<Tag>Tag 1 </Tag>`;
 

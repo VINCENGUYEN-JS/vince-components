@@ -1,5 +1,5 @@
-import * as React from "react";
-import type { RenderIconType } from "./interface";
+import * as React from 'react';
+import type { RenderIconType } from './interface';
 
 export interface IconProps {
   icon?: RenderIconType;
@@ -11,7 +11,7 @@ export interface IconProps {
 export default function Icon({ icon, props, children }: IconProps) {
   let iconNode: React.ReactElement;
 
-  if (typeof icon === "function") {
+  if (typeof icon === 'function') {
     iconNode = React.createElement(icon as any, {
       ...props,
     });

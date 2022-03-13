@@ -1,11 +1,11 @@
-import type * as React from "react";
+import type * as React from 'react';
 
 // ========================== Basic ==========================
-export type MenuMode = "horizontal" | "vertical" | "inline";
+export type MenuMode = 'horizontal' | 'vertical' | 'inline';
 
 export type BuiltinPlacements = Record<string, any>;
 
-export type TriggerSubMenuAction = "click" | "hover";
+export type TriggerSubMenuAction = 'click' | 'hover';
 
 export interface RenderIconInfo {
   isSelected?: boolean;

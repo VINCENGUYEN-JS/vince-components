@@ -1,5 +1,5 @@
-import InternalLayout, { BasicProps, Content, Header, Footer } from "./layout";
-import Sider from "./Sider";
+import InternalLayout, { BasicProps, Content, Header, Footer } from './layout';
+import Sider from './Sider';
 
 interface LayoutComposition extends React.FC<BasicProps> {
   Content: typeof Content;

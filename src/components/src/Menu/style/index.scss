@@ -1,5 +1,5 @@
-@use "../../style/reset.scss" as *;
-@use "../../style/variable.scss" as *;
+@use '../../style/reset.scss' as *;
+@use '../../style/variable.scss' as *;
 
 .menu {
   @include reset-component();
@@ -75,7 +75,7 @@
       left: 20px;
       border-bottom: 2px solid transparent;
       transition: border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-      content: "";
+      content: '';
       border-bottom: 2px solid #1890ff;
     }
   }

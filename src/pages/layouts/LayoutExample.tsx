@@ -1,8 +1,8 @@
-import * as React from "react";
+import * as React from 'react';
 
-import ComponentDoc from "../../template/ComponentDoc";
-import { layoutAPI } from "../componentApi";
-import { Divider, Layout } from "@vince-components";
+import ComponentDoc from '../../template/ComponentDoc';
+import { layoutAPI } from '../componentApi';
+import { Divider, Layout } from '@vince-components';
 
 const layoutCode = `<Layout>
   <Layout.Header>Header</Layout.Header>

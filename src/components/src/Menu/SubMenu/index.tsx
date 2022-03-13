@@ -1,9 +1,9 @@
-import * as React from "react";
-import classNames from "classnames";
+import * as React from 'react';
+import classNames from 'classnames';
 
-import type { RenderIconType } from "../interface";
-import Icon from "../Icon";
-import { parseChildren } from "../../../../utils/nodeUtil";
+import type { RenderIconType } from '../interface';
+import Icon from '../Icon';
+import { parseChildren } from '../../../../utils/nodeUtil';
 
 type SubMenuProps = {
   className?: string;
@@ -13,14 +13,14 @@ type SubMenuProps = {
   expandIcon?: RenderIconType;
 };
 
-const prefixCls = "menu-submenu";
+const prefixCls = 'menu-submenu';
 
 export default function SubMenu(props: SubMenuProps) {
   const { children, title, itemIcon } = props;
   const [open, isOpen] = React.useState(false);
   const childList = parseChildren(children, []);
 
-  const hiddenMenuItem = classNames("menu", {
+  const hiddenMenuItem = classNames('menu', {
     [`${prefixCls}-hidden`]: !open,
   });
 

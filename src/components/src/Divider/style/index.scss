@@ -1,5 +1,5 @@
-@use "../../style/reset.scss" as *;
-@use "../../style/variable.scss" as *;
+@use '../../style/reset.scss' as *;
+@use '../../style/variable.scss' as *;
 
 $divider-color: rgba(0, 0, 0, 6%);
 
@@ -31,7 +31,7 @@ $divider-color: rgba(0, 0, 0, 6%);
       border-top-color: inherit;
       border-bottom: 0;
       transform: translateY(50%);
-      content: "";
+      content: '';
     }
   }
   &-horizontal#{&}-with-text-left {

@@ -1,9 +1,9 @@
-import * as React from "react";
-import classNames from "classnames";
+import * as React from 'react';
+import classNames from 'classnames';
 
-import { RowContext } from "./row";
+import { RowContext } from './row';
 
-const prefixCls = "col";
+const prefixCls = 'col';
 
 type ColProps = {
   children: React.ReactNode;

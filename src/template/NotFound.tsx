@@ -1,8 +1,8 @@
-import * as React from "react";
-import { Link } from "react-router-dom";
+import * as React from 'react';
+import { Link } from 'react-router-dom';
 
-import { HomeOutlined } from "@ant-design/icons";
-import { Button, Result } from "@vince-components";
+import { HomeOutlined } from '@ant-design/icons';
+import { Button, Result } from '@vince-components';
 
 const NotFound = () => {
   return (

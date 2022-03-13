@@ -1,7 +1,7 @@
-import Menu, { MenuProps } from "./Menu";
-import MenuItem from "./MenuItem";
-import MenuItemGroup from "./MenuGroup";
-import SubMenu from "./SubMenu";
+import Menu, { MenuProps } from './Menu';
+import MenuItem from './MenuItem';
+import MenuItemGroup from './MenuGroup';
+import SubMenu from './SubMenu';
 
 interface MenuComposition extends React.FC<MenuProps> {
   Item: typeof MenuItem;

@@ -1,6 +1,6 @@
-import * as React from "react";
-import { highlightAll } from "prismjs";
-import "prismjs/themes/prism-tomorrow.css";
+import * as React from 'react';
+import { highlightAll } from 'prismjs';
+import 'prismjs/themes/prism-tomorrow.css';
 
 type CodeProps = {
   code: string;
@@ -14,7 +14,7 @@ export default function Code({ code, language, codeIsOn }: CodeProps) {
   }, []);
   console.log({ code });
   return (
-    <div className={codeIsOn ? "codeHidden" : ""}>
+    <div className={codeIsOn ? 'codeHidden' : ''}>
       <pre>
         <code className={`language-${language}`}>{code}</code>
       </pre>

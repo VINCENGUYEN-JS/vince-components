@@ -1,8 +1,8 @@
-import * as React from "react";
+import * as React from 'react';
 
-import ComponentDoc from "../../template/ComponentDoc";
-import { Button, Divider, Result } from "@vince-components";
-import { resultAPI } from "../componentApi";
+import ComponentDoc from '../../template/ComponentDoc';
+import { Button, Divider, Result } from '@vince-components';
+import { resultAPI } from '../componentApi';
 
 const resultCode = `<Result status="404" title="404" subTitle="Sorry , the page you visited does not exist" extra={<Button type="primary">BackHome</Button>} />`;
 

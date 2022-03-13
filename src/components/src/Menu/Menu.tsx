@@ -1,19 +1,19 @@
-import * as React from "react";
-import classNames from "classnames";
+import * as React from 'react';
+import classNames from 'classnames';
 
-import { parseChildren } from "../../../utils/nodeUtil";
-import "./style/index.scss";
+import { parseChildren } from '../../../utils/nodeUtil';
+import './style/index.scss';
 
 export interface MenuProps extends React.HTMLAttributes<HTMLUListElement> {
   children: React.ReactNode;
   key?: string;
   defaultSelectedKey?: string[];
   mode?:
-    | "vertical"
-    | "vertical-left"
-    | "vertical-right"
-    | "horizontal"
-    | "inline";
+    | 'vertical'
+    | 'vertical-left'
+    | 'vertical-right'
+    | 'horizontal'
+    | 'inline';
 }
 
 interface MenuInfo {
@@ -30,14 +30,14 @@ export const MenuContext = React.createContext<MenuContextProps>(
   {} as MenuContextProps
 );
 
-const prefixCls = "menu";
+const prefixCls = 'menu';
 
 const Menu = (props: MenuProps) => {
   const {
     children,
     style: customStyle,
     defaultSelectedKey,
-    mode = "vertical",
+    mode = 'vertical',
   } = props;
   const [selectedKeys, setSeletedKeys] = React.useState<string[]>(
     defaultSelectedKey || []
