@@ -5,6 +5,7 @@ import { Divider, Input, Space } from '@vince-components';
 import { inputAPI } from '../componentApi';
 
 const inputCode = `<Input placeholder="Basic Usage" />
+<Input placeholder="Basic Usage" addonAfter=".com" addonBefore="https://" />
 <Input.Search onSearch={onSearch} onChange={onChange} placeholder="Search something">`;
 
 const InputExample = () => {
@@ -22,6 +23,11 @@ const InputExample = () => {
         <Space direction="vertical">
           <Input placeholder="Basic Usage" />
           <Input placeholder="Basic Usage" addonAfter=".com" />
+          <Input
+            addonBefore="https://"
+            placeholder="Basic Usage"
+            addonAfter=".com"
+          />
         </Space>
         <Divider orientation="left">Input Search</Divider>
         <Input.Search
