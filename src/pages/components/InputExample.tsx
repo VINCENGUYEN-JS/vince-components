@@ -1,8 +1,8 @@
-import * as React from "react";
+import * as React from 'react';
 
-import ComponentDoc from "../../template/ComponentDoc";
-import { Divider, Input } from "@vince-components";
-import { inputAPI } from "../componentApi";
+import ComponentDoc from '../../template/ComponentDoc';
+import { Divider, Input, Space } from '@vince-components';
+import { inputAPI } from '../componentApi';
 
 const inputCode = `<Input placeholder="Basic Usage" />
 <Input.Search onSearch={onSearch} onChange={onChange} placeholder="Search something">`;
@@ -18,7 +18,11 @@ const InputExample = () => {
         code={inputCode}
         api={inputAPI}
       >
-        <Input placeholder="Basic Usage" />
+        <Divider orientation="left">Basic Input</Divider>
+        <Space direction="vertical">
+          <Input placeholder="Basic Usage" />
+          <Input placeholder="Basic Usage" addonAfter=".com" />
+        </Space>
         <Divider orientation="left">Input Search</Divider>
         <Input.Search
           onSearch={onSearch}
