@@ -1,5 +1,5 @@
-import * as React from "react";
-import type { RouteObject } from "react-router-dom";
+import * as React from 'react';
+import type { RouteObject } from 'react-router-dom';
 
 import {
   ButtonExample,
@@ -13,7 +13,8 @@ import {
   CardExample,
   TagExample,
   SpaceExample,
-} from "./pages";
+  ModalExample,
+} from './pages';
 
 export interface CustomRouteObject extends RouteObject {
   key: string;
@@ -21,59 +22,64 @@ export interface CustomRouteObject extends RouteObject {
 
 const routes: CustomRouteObject[] = [
   {
-    key: "overview",
-    path: "/overview",
+    key: 'overview',
+    path: '/overview',
     element: <OverviewExample />,
   },
   {
-    key: "card",
-    path: "/card",
+    key: 'card',
+    path: '/card',
     element: <CardExample />,
   },
   {
-    key: "button",
-    path: "/button",
+    key: 'button',
+    path: '/button',
     element: <ButtonExample />,
   },
   {
-    key: "divider",
-    path: "/divider",
+    key: 'divider',
+    path: '/divider',
     element: <DividerExample />,
   },
   {
-    key: "grid",
-    path: "/grid",
+    key: 'grid',
+    path: '/grid',
     element: <GridExample />,
   },
   {
-    key: "layout",
-    path: "/layout",
+    key: 'layout',
+    path: '/layout',
     element: <LayoutExample />,
   },
   {
-    key: "tag",
-    path: "/tag",
+    key: 'tag',
+    path: '/tag',
     element: <TagExample />,
   },
   {
-    key: "menu",
-    path: "/menu",
+    key: 'menu',
+    path: '/menu',
     element: <MenuExample />,
   },
   {
-    key: "input",
-    path: "/input",
+    key: 'input',
+    path: '/input',
     element: <InputExample />,
   },
   {
-    key: "result",
-    path: "/result",
+    key: 'result',
+    path: '/result',
     element: <ResultExample />,
   },
   {
-    key: "space",
-    path: "/space",
+    key: 'space',
+    path: '/space',
     element: <SpaceExample />,
+  },
+  {
+    key: 'modal',
+    path: '/modal',
+    element: <ModalExample />,
   },
 ];
 

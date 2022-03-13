@@ -22,6 +22,7 @@ const filterFn = (routes: CustomRouteObject[]) => (componentType: string) => {
       'input',
       'result',
       'tag',
+      'modal',
     ];
     return routes.filter((route) => supportedComponents.includes(route.key));
   } else {
