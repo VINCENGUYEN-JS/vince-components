@@ -83,4 +83,4 @@ const routes: CustomRouteObject[] = [
   },
 ];
 
-export default routes;
+export default routes.sort((a, b) => a.key.localeCompare(b.key));

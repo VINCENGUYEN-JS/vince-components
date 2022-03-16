@@ -221,6 +221,34 @@ const menuAPI: APIProps[][] = [
   ],
 ];
 
+const modalAPI: APIProps[] = [
+  {
+    title: 'Modal',
+    property: 'closable',
+    description: 'Whether to show the close button',
+    type: 'boolean',
+    default: 'true',
+  },
+  {
+    property: 'footer',
+    description: 'Set as null when you dont need default button',
+    type: 'ReactNode',
+    default: 'OK and Cancel Btn',
+  },
+  {
+    property: 'title',
+    description: 'The title of modal',
+    type: 'ReactNode',
+    default: '-',
+  },
+  {
+    property: 'width',
+    description: 'Width of the modal dialog',
+    type: 'number',
+    default: '520',
+  },
+];
+
 const layoutAPI: APIProps[][] = [
   [
     {
@@ -251,6 +279,7 @@ export {
   spaceAPI,
   gridAPI,
   menuAPI,
+  modalAPI,
   inputAPI,
   layoutAPI,
 };
