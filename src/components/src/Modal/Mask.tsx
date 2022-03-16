@@ -8,12 +8,9 @@ type MaskProps = {
 };
 
 const Mask = (prop: MaskProps) => {
-  const { style, visible, maskProps, prefixCls } = prop;
-  console.log({ visible });
-  const classes = !visible ? `${prefixCls}-mask-hidden` : `${prefixCls}-mask`;
-  return visible ? (
-    <div style={{ ...style }} className={classes} {...maskProps} />
-  ) : null;
+  const { style, maskProps, prefixCls } = prop;
+  const classes = `${prefixCls}-mask`;
+  return <div style={{ ...style }} className={classes} {...maskProps} />;
 };
 
 export default Mask;

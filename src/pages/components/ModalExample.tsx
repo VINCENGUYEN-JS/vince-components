@@ -7,10 +7,19 @@ const ModalExample = () => {
   console.log({ isOn });
   return (
     <ComponentDoc title="Modal" introduction="Modal dialogs">
-      <Button type="primary" onClick={() => setOnOff(() => !isOn)}>
+      <Button
+        type="primary"
+        onClick={() => {
+          setOnOff(!isOn);
+        }}
+      >
         Click to trigger modal
       </Button>
-      <Modal visible={isOn}></Modal>
+      <Modal visible={isOn} onClose={() => setOnOff(false)} title="Modal">
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+      </Modal>
     </ComponentDoc>
   );
 };
