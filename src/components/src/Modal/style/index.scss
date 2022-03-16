@@ -27,4 +27,47 @@
       display: none;
     }
   }
+  &-content {
+    position: relative;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 6px 6px;
+    background-clip: padding-box;
+  }
+  &-header {
+    padding: 13px 20px 14px 20px;
+    border-radius: 5px 5px 0 0;
+    background: #fff;
+    color: #666;
+    border-bottom: 1px solid #e9e9e9;
+  }
+  &-body {
+    padding: 20px;
+  }
+  &-footer {
+    border-top: 1px solid #e9e9e9;
+    padding: 10px 20px;
+    text-align: right;
+    border-radius: 0 0 5px 5px;
+  }
+
+  &-close {
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+    font-size: 21px;
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: 0.2;
+    text-decoration: none;
+    &-x:after {
+      content: '×';
+    }
+  }
 }

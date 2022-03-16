@@ -8,15 +8,26 @@ import './style/index.scss';
 const prefixCls = 'modal';
 
 const Modal = (props: ModalPropTypes) => {
-  const { visible = false, width = 520, onClose, title, children } = props;
+  const {
+    visible = false,
+    width = 520,
+    onClose,
+    title,
+    children,
+    closable = true,
+  } = props;
   const [animatedVisible, setAnimatedVisible] = React.useState(visible);
   const modalRef = React.useRef<HTMLDivElement>(null);
+
+  const onCloseLocal = () => {
+    setAnimatedVisible(false);
+    onClose && onClose();
+  };
 
   const onClickOutSide = (e: MouseEvent) => {
     const element = e.target;
     if (modalRef.current && !modalRef.current.contains(element as Node)) {
-      setAnimatedVisible(false);
-      onClose && onClose();
+      onCloseLocal();
     }
   };
 
@@ -44,6 +55,9 @@ const Modal = (props: ModalPropTypes) => {
           width={width}
           title={title}
           prefixCls={prefixCls}
+          ref={modalRef}
+          closable={closable}
+          onClose={onCloseLocal}
         >
           {children}
         </Content>
