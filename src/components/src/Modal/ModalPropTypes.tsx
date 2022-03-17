@@ -6,7 +6,7 @@ export type ModalPropTypes = {
   title?: React.ReactNode;
   prefixCls?: string;
   onClose?: () => any;
-
+  onOk?: () => any;
   children?: React.ReactNode;
   width?: number;
   footer?: React.ReactNode;

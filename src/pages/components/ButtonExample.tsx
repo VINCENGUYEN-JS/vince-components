@@ -20,9 +20,7 @@ const ButtonExample = () => (
       code={buttonCode}
     >
       <Divider orientation="left">Button With Primary + Large</Divider>
-      <Button type="primary" size="large">
-        Primary
-      </Button>
+      <Button type="primary">Primary</Button>
       <Divider orientation="left">Button With Primary + Small</Divider>
       <Button type="dashed" size="small">
         Primary

@@ -18,7 +18,7 @@ type ButtonShape = 'default' | 'circle' | 'round';
 type ButtonHTMLType = 'submit' | 'button' | 'reset';
 
 type BaseButtonProps = {
-  type: ButtonType;
+  type?: ButtonType;
   shape?: ButtonShape;
   size?: SizeType;
   icon?: React.ReactNode;
