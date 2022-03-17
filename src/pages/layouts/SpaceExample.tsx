@@ -12,7 +12,13 @@ const spaceCode = `<Space>
 <Space direction="vertical">
   space
   <Button type="primary">Button</Button>
-</Space>`;
+</Space>
+
+<Space  alignment="center | start | end | baseline">
+  space
+  <Button type="primary">Button</Button>
+</Space>
+`;
 
 const SpaceAlignBlock = ({ children }: { children: React.ReactNode }) => (
   <div
@@ -77,6 +83,39 @@ const SpaceExample = () => {
             baseline space
             <Button type="primary" style={{ height: '100px' }}>
               Button
+            </Button>
+          </Space>
+        </SpaceAlignBlock>
+      </div>
+      <Divider>[size]</Divider>
+      <div style={{ display: 'flex', alignItems: 'flexStart' }}>
+        <SpaceAlignBlock>
+          <Space size="small">
+            <Button type="primary" style={{ height: '100px' }}>
+              Size 8
+            </Button>
+            <Button type="primary" style={{ height: '100px' }}>
+              Small
+            </Button>
+          </Space>
+        </SpaceAlignBlock>
+        <SpaceAlignBlock>
+          <Space align="start" size="middle">
+            <Button type="primary" style={{ height: '100px' }}>
+              Size 16
+            </Button>
+            <Button type="primary" style={{ height: '100px' }}>
+              Middle
+            </Button>
+          </Space>
+        </SpaceAlignBlock>
+        <SpaceAlignBlock>
+          <Space align="end" size="large">
+            <Button type="primary" style={{ height: '100px' }}>
+              Size 24
+            </Button>
+            <Button type="primary" style={{ height: '100px' }}>
+              Large
             </Button>
           </Space>
         </SpaceAlignBlock>

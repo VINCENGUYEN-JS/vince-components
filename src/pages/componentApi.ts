@@ -6,7 +6,11 @@ type APIProps = {
   title?: string;
 };
 
-const buttonAPI: APIProps[] = [
+const orderAPI = (api: APIProps[]): APIProps[] => {
+  return api.sort((a, b) => a.property.localeCompare(b.property));
+};
+
+const buttonAPI: APIProps[] = orderAPI([
   {
     property: 'type',
     description: 'Can be set to primary dashed',
@@ -25,9 +29,9 @@ const buttonAPI: APIProps[] = [
     type: 'default | circle | round',
     default: 'default',
   },
-];
+]);
 
-const cardAPI: APIProps[] = [
+const cardAPI: APIProps[] = orderAPI([
   {
     property: 'title',
     description: 'Card title',
@@ -40,9 +44,9 @@ const cardAPI: APIProps[] = [
     type: 'ReactNode',
     default: '-',
   },
-];
+]);
 
-const dividerAPI: APIProps[] = [
+const dividerAPI: APIProps[] = orderAPI([
   {
     property: 'children',
     description: 'The wrapped title',
@@ -55,18 +59,18 @@ const dividerAPI: APIProps[] = [
     type: 'left | right | center',
     default: 'center',
   },
-];
+]);
 
-const tagAPI: APIProps[] = [
+const tagAPI: APIProps[] = orderAPI([
   {
     property: 'children',
     description: 'Title of Tag',
     type: 'ReactNode',
     default: '-',
   },
-];
+]);
 
-const resultAPI: APIProps[] = [
+const resultAPI: APIProps[] = orderAPI([
   {
     property: 'title',
     description: 'Title of Result',
@@ -79,9 +83,9 @@ const resultAPI: APIProps[] = [
     type: 'success | error | warning | default',
     default: 'info',
   },
-];
+]);
 
-const spaceAPI: APIProps[] = [
+const spaceAPI: APIProps[] = orderAPI([
   {
     title: 'Space',
     property: 'direction',
@@ -95,7 +99,13 @@ const spaceAPI: APIProps[] = [
     type: 'start | end | center |baseline',
     default: 'center',
   },
-];
+  {
+    property: 'size',
+    description: 'The space size',
+    type: 'small | middle | large',
+    default: 'small',
+  },
+]);
 
 const gridAPI: APIProps[][] = [
   [
@@ -221,7 +231,7 @@ const menuAPI: APIProps[][] = [
   ],
 ];
 
-const modalAPI: APIProps[] = [
+const modalAPI: APIProps[] = orderAPI([
   {
     title: 'Modal',
     property: 'closable',
@@ -247,7 +257,7 @@ const modalAPI: APIProps[] = [
     type: 'number',
     default: '520',
   },
-];
+]);
 
 const layoutAPI: APIProps[][] = [
   [
