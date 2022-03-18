@@ -9,14 +9,13 @@ type SubMenuProps = {
   className?: string;
   title?: string;
   children?: React.ReactNode;
-  itemIcon?: RenderIconType;
   expandIcon?: RenderIconType;
 };
 
 const prefixCls = 'menu-submenu';
 
 export default function SubMenu(props: SubMenuProps) {
-  const { children, title, itemIcon } = props;
+  const { children, title } = props;
   const [open, isOpen] = React.useState(false);
   const childList = parseChildren(children, []);
 
@@ -24,11 +23,17 @@ export default function SubMenu(props: SubMenuProps) {
     [`${prefixCls}-hidden`]: !open,
   });
 
+  const subMenuClass = classNames('menu-submenu', {
+    [`${prefixCls}-open`]: open,
+  });
+
   return (
-    <li onClick={() => isOpen((open) => !open)}>
+    <li className={subMenuClass} onClick={() => isOpen((open) => !open)}>
       <div className={`${prefixCls}-title`}>
         {title}
-        <Icon icon={itemIcon} />
+        <Icon>
+          <i className={`${prefixCls}-arrow`} />
+        </Icon>
         <ul className={hiddenMenuItem}>{childList}</ul>
       </div>
     </li>

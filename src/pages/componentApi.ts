@@ -217,8 +217,8 @@ const menuAPI: APIProps[][] = [
   [
     {
       title: 'Menu.SubMenu',
-      property: 'icon',
-      description: 'Icon of sub menu',
+      property: 'title',
+      description: 'Title of sub menu',
       type: 'React Node',
       default: '-',
     },
@@ -226,6 +226,12 @@ const menuAPI: APIProps[][] = [
       property: 'children',
       description: 'Sub menu items',
       type: 'Array<MenuItem | SubMenu>',
+      default: '-',
+    },
+    {
+      property: 'key',
+      description: 'Unique ID of the sub-menu',
+      type: 'string',
       default: '-',
     },
   ],
