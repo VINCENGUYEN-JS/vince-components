@@ -1,5 +1,10 @@
 @use '../../style/variable.scss' as *;
 
+@mixin hover($color: $primary) {
+  border-color: $color;
+  border-right-width: $border-width-base;
+}
+
 @mixin input() {
   position: relative;
   display: inline-block;
@@ -14,6 +19,14 @@
   border: $border-width-base $border-style-base $input-border-color;
   border-radius: $border-radius-base;
   transition: all 0.3s;
+  &:hover {
+    @include hover();
+  }
+  &:focus {
+    border-color: $primary-color;
+    border-right-width: $border-width-base;
+    outline: 0;
+  }
 }
 
 @mixin input-group() {
