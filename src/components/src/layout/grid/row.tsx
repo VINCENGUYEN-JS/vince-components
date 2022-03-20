@@ -20,10 +20,11 @@ const prefixCls = 'row';
 type RowProps = {
   children: React.ReactNode;
   gutter?: number | Partial<Record<Breakpoint, number>>;
+  justify?: 'start' | 'end' | 'center' | 'space-around' | 'space-between';
 };
 
 const Row = (props: RowProps) => {
-  const { children, gutter = 0 } = props;
+  const { children, gutter = 0, justify } = props;
 
   const [screens, setScreens] = React.useState<ScreenMap>({
     xs: true,
@@ -58,7 +59,9 @@ const Row = (props: RowProps) => {
     return result;
   }, [screens, gutter]);
 
-  const classes = classNames(prefixCls, {});
+  const classes = classNames(prefixCls, {
+    [`${prefixCls}-${justify}`]: justify,
+  });
 
   const rowContext = React.useMemo(
     () => ({

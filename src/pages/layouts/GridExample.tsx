@@ -55,14 +55,22 @@ const gridCode = `<Row>
   </Col>
 </Row>`;
 
+const gridCodePart2 = `<Row justify="start | center | end | space-around | space-between">
+  <Col span={4}>
+    <BorderBox>Col 4</BorderBox>
+  </Col>
+  <Col span={4}>
+    <BorderBox>Col 4</BorderBox>
+  </Col>
+  <Col span={4}>
+    <BorderBox>Col 4</BorderBox>
+  </Col>
+</Row>
+`;
+
 const GridExample = () => (
   <>
-    <ComponentDoc
-      title="Grid"
-      introduction="24 Grids"
-      api={gridAPI}
-      code={gridCode}
-    >
+    <ComponentDoc title="Grid" introduction="24 Grids" code={gridCode}>
       <Divider>Horizontal</Divider>
       <Row>
         <Col span={8}>
@@ -113,6 +121,73 @@ const GridExample = () => (
           <BorderBox>Col 6</BorderBox>
         </Col>
       </Row>
+    </ComponentDoc>
+    <ComponentDoc api={gridAPI} code={gridCodePart2}>
+      <Divider>Start</Divider>
+      <Row justify="start">
+        <Col span={4}>
+          <BorderBox>Col 4</BorderBox>
+        </Col>
+        <Col span={4}>
+          <BorderBox>Col 4</BorderBox>
+        </Col>
+        <Col span={4}>
+          <BorderBox>Col 4</BorderBox>
+        </Col>
+      </Row>
+      <Divider></Divider>
+      <Divider>Center</Divider>
+      <Row justify="center">
+        <Col span={4}>
+          <BorderBox>Col 4</BorderBox>
+        </Col>
+        <Col span={4}>
+          <BorderBox>Col 4</BorderBox>
+        </Col>
+        <Col span={4}>
+          <BorderBox>Col 4</BorderBox>
+        </Col>
+      </Row>
+      <Divider></Divider>
+      <Divider>End</Divider>
+      <Row justify="end">
+        <Col span={4}>
+          <BorderBox>Col 4</BorderBox>
+        </Col>
+        <Col span={4}>
+          <BorderBox>Col 4</BorderBox>
+        </Col>
+        <Col span={4}>
+          <BorderBox>Col 4</BorderBox>
+        </Col>
+      </Row>
+      <Divider></Divider>
+      <Divider>Space-around</Divider>
+      <Row justify="space-around">
+        <Col span={4}>
+          <BorderBox>Col 4</BorderBox>
+        </Col>
+        <Col span={4}>
+          <BorderBox>Col 4</BorderBox>
+        </Col>
+        <Col span={4}>
+          <BorderBox>Col 4</BorderBox>
+        </Col>
+      </Row>
+      <Divider></Divider>
+      <Divider>Space-between</Divider>
+      <Row justify="space-between">
+        <Col span={4}>
+          <BorderBox>Col 4</BorderBox>
+        </Col>
+        <Col span={4}>
+          <BorderBox>Col 4</BorderBox>
+        </Col>
+        <Col span={4}>
+          <BorderBox>Col 4</BorderBox>
+        </Col>
+      </Row>
+      <Divider></Divider>
     </ComponentDoc>
   </>
 );

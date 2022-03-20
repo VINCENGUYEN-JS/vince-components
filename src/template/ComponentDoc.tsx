@@ -16,8 +16,8 @@ type APIProps = {
 };
 
 type ComponentDocProps = {
-  title: string;
-  introduction: string;
+  title?: string;
+  introduction?: string;
   children?: React.ReactNode;
   api?: APIProps[] | APIProps[][];
   apiIntroduction?: string;
@@ -106,8 +106,8 @@ const ComponentDoc = (props: ComponentDocProps) => {
   });
   return (
     <section className="markdown">
-      <h1>{title}</h1>
-      <p>{introduction}</p>
+      {title && <h1>{title}</h1>}
+      {introduction && <p>{introduction}</p>}
       <Space align="baseline">
         <h2>Examples</h2>
         <ExpandOrUnExpandIcon onClick={() => setExample(!exampleIsOn)} />

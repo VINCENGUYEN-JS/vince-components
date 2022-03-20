@@ -116,6 +116,12 @@ const gridAPI: APIProps[][] = [
       type: 'number | object | array',
       default: '0',
     },
+    {
+      property: 'justify',
+      description: 'Horizontal arrangement',
+      type: 'start | end | center | space-around | space-between',
+      default: 'start',
+    },
   ],
   [
     {
