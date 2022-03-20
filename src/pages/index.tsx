@@ -13,3 +13,4 @@ export { default as ModalExample } from './components/ModalExample';
 export { default as GridExample } from './layouts/GridExample';
 export { default as LayoutExample } from './layouts/LayoutExample';
 export { default as SpaceExample } from './layouts/SpaceExample';
+export { default as AlignExample } from './layouts/AlignExample';

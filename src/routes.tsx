@@ -2,6 +2,7 @@ import * as React from 'react';
 import type { RouteObject } from 'react-router-dom';
 
 import {
+  AlignExample,
   ButtonExample,
   DividerExample,
   GridExample,
@@ -80,6 +81,11 @@ const routes: CustomRouteObject[] = [
     key: 'modal',
     path: '/modal',
     element: <ModalExample />,
+  },
+  {
+    key: 'align',
+    path: '/align',
+    element: <AlignExample />,
   },
 ];
 
