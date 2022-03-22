@@ -36,8 +36,8 @@ const SpaceAlignBlock = ({ children }: { children: React.ReactNode }) => (
 const SpaceExample = () => {
   return (
     <ComponentDoc
-      title="Space"
-      introduction="Set components spacing"
+      title="Space or Stack"
+      introduction="One of the simplest and yet most common layout patterns found on the web is putting one element on top of another element with consistent space. From form labels, to paragraphs of text, to social media feeds. They all need to stack one thing on top of another with uniform space between them. This problem is precisely what the Stack primitive solves."
       api={spaceAPI}
       code={spaceCode}
     >
@@ -47,9 +47,9 @@ const SpaceExample = () => {
         <Button type="primary">Button</Button>
       </Space>
       <Divider>[vertical]</Divider>
-      <Space direction="vertical">
-        space
-        <Button type="primary">Button</Button>
+      <Space direction="vertical" size={2}>
+        <label htmlFor="name">Name</label>
+        <input type="text" id="name" />
       </Space>
       <Divider>[align]</Divider>
 

@@ -102,7 +102,7 @@ const spaceAPI: APIProps[] = orderAPI([
   {
     property: 'size',
     description: 'The space size',
-    type: 'small | middle | large',
+    type: 'small | middle | large | number',
     default: 'small',
   },
 ]);

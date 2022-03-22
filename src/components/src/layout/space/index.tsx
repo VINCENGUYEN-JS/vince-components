@@ -10,8 +10,10 @@ const prefixCls = 'space';
 interface SpaceProps extends React.HTMLAttributes<HTMLDivElement> {
   align?: 'start' | 'end' | 'center' | 'baseline';
   direction?: 'horizontal' | 'vertical';
-  size?: 'small' | 'middle' | 'large';
+  size?: 'small' | 'middle' | 'large' | number;
 }
+
+type SizeType = 'small' | 'middle' | 'large';
 
 const spaceSize = {
   small: 8,
@@ -19,7 +21,7 @@ const spaceSize = {
   large: 24,
 };
 
-function getNumberSize(size: keyof typeof spaceSize) {
+function getNumberSize(size: SizeType | number) {
   return typeof size === 'string' ? spaceSize[size] : size || 0;
 }
 
