@@ -107,6 +107,22 @@ const spaceAPI: APIProps[] = orderAPI([
   },
 ]);
 
+const splitAPI: APIProps[] = orderAPI([
+  {
+    title: 'Split',
+    property: 'fraction',
+    description: 'The fraction of split',
+    type: '1/4 | 1/3 | 1/2 | 2/3 | 3/4 | auto-start | auto-end',
+    default: '1/2',
+  },
+  {
+    property: 'gutter',
+    description: 'The gutter of split',
+    type: 'xs | sm | md | lg | xl | xxl',
+    default: 'lg',
+  },
+]);
+
 const gridAPI: APIProps[][] = [
   [
     {
@@ -298,6 +314,7 @@ export {
   dividerAPI,
   tagAPI,
   resultAPI,
+  splitAPI,
   spaceAPI,
   gridAPI,
   menuAPI,

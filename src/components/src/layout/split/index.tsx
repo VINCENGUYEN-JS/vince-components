@@ -10,20 +10,32 @@ const fractions = {
   'auto-end': '1fr auto',
 };
 
+const spacingMap = {
+  xs: '0.125rem',
+  sm: '0.25rem',
+  md: '0.5rem',
+  lg: '1rem',
+  xl: '2rem',
+  xxl: '4rem',
+};
+
 type fraction = keyof typeof fractions;
+type gutter = keyof typeof spacingMap;
 
 type SplitProps = {
-  fraction: fraction;
+  fraction?: fraction;
   children: React.ReactNode;
+  gutter?: gutter;
 };
 
 const prefixCls = 'split';
 
 const Split = (props: SplitProps) => {
-  const { fraction, children } = props;
+  const { fraction, children, gutter } = props;
   const divStyle = {
     display: 'grid',
-    gridTemplateColumns: fractions[fraction],
+    gap: gutter ? spacingMap[gutter] : spacingMap.lg,
+    gridTemplateColumns: fraction ? fractions[fraction] : fractions['1/2'],
   };
   return (
     <div className={prefixCls} style={divStyle}>
