@@ -15,6 +15,7 @@ import {
   TagExample,
   SpaceExample,
   ModalExample,
+  SplitExample,
 } from './pages';
 
 export interface CustomRouteObject extends RouteObject {
@@ -86,6 +87,11 @@ const routes: CustomRouteObject[] = [
     key: 'align',
     path: '/align',
     element: <AlignExample />,
+  },
+  {
+    key: 'split',
+    path: '/split',
+    element: <SplitExample />,
   },
 ];
 

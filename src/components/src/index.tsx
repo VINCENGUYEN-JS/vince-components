@@ -6,4 +6,4 @@ export { default as Menu } from './Menu';
 export { default as Modal } from './Modal';
 export { default as Result } from './Result';
 export { default as Tag } from './Tag';
-export { Align, Row, Col, Layout, Space } from './layout';
+export { Align, Row, Col, Layout, Space, Split } from './layout';
