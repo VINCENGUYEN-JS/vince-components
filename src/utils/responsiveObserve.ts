@@ -4,6 +4,15 @@ export type ScreenMap = Partial<Record<Breakpoint, boolean>>;
 
 type SubcribeFn = (screens: ScreenMap) => void;
 
+export const responsiveArray: Breakpoint[] = [
+  'xxl',
+  'xl',
+  'lg',
+  'md',
+  'sm',
+  'xs',
+];
+
 const responsiveMap: BreakpointMap = {
   xs: '(max-width: 575px)',
   sm: '(min-width:576px)',

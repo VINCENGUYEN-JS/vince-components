@@ -68,6 +68,71 @@ const gridCodePart2 = `<Row justify="start | center | end | space-around | space
 </Row>
 `;
 
+const gridCodePart3 = `
+<Row>
+  <Col span={6}>
+    <BorderBox>Col 6</BorderBox>
+  </Col>
+  <Col span={6} offset={6}>
+    <BorderBox>Col 6</BorderBox>
+  </Col>
+</Row>
+
+<Row gutter={[12, 12]}>
+  <Col span={12}>
+    <BorderBox>First Name</BorderBox>
+  </Col>
+  <Col span={12}>
+    <BorderBox>Last Name</BorderBox>
+  </Col>
+  <Col span={18}>
+    <BorderBox>Email</BorderBox>
+  </Col>
+  <Col span={24}>
+    <BorderBox>Street Address</BorderBox>
+  </Col>
+  <Col span={8}>
+    <BorderBox>City</BorderBox>
+  </Col>
+  <Col span={8}>
+    <BorderBox>State</BorderBox>
+  </Col>
+  <Col span={8}>
+    <BorderBox>Zip Code</BorderBox>
+  </Col>
+</Row>
+
+<Row>
+  <Col span={12}>
+    <BorderBox>First Name</BorderBox>
+  </Col>
+  <Col span={12}>
+    <BorderBox>Last Name</BorderBox>
+  </Col>
+</Row>
+<Row>
+  <Col span={18}>
+   <BorderBox>Email</BorderBox>
+   </Col>
+</Row>
+<Row>
+  <Col span={4}>
+    <BorderBox>Street Address</BorderBox>
+  </Col>
+</Row>
+<Row>
+  <Col span={8}>
+    <BorderBox>City</BorderBox>
+  </Col>
+  <Col span={8}>
+    <BorderBox>State</BorderBox>
+  </Col>
+  <Col span={8}>
+    <BorderBox>Zip Code</BorderBox>
+  </Col>
+</Row>
+`;
+
 const GridExample = () => (
   <>
     <ComponentDoc title="Grid" introduction="24 Grids" code={gridCode}>
@@ -112,17 +177,8 @@ const GridExample = () => (
           <BorderBox>Col 12</BorderBox>
         </Col>
       </Row>
-      <Divider>Colum with offset</Divider>
-      <Row>
-        <Col span={6}>
-          <BorderBox>Col 6</BorderBox>
-        </Col>
-        <Col span={6} offset={6}>
-          <BorderBox>Col 6</BorderBox>
-        </Col>
-      </Row>
     </ComponentDoc>
-    <ComponentDoc api={gridAPI} code={gridCodePart2}>
+    <ComponentDoc code={gridCodePart2}>
       <Divider>Start</Divider>
       <Row justify="start">
         <Col span={4}>
@@ -188,6 +244,71 @@ const GridExample = () => (
         </Col>
       </Row>
       <Divider></Divider>
+    </ComponentDoc>
+    <ComponentDoc code={gridCodePart3} api={gridAPI}>
+      <Divider>Colum with offset</Divider>
+      <Row>
+        <Col span={6}>
+          <BorderBox>Col 6</BorderBox>
+        </Col>
+        <Col span={6} offset={6}>
+          <BorderBox>Col 6</BorderBox>
+        </Col>
+      </Row>
+      <Divider>Complex Layout</Divider>
+      <Row gutter={[12, 12]}>
+        <Col span={12}>
+          <BorderBox>First Name</BorderBox>
+        </Col>
+        <Col span={12}>
+          <BorderBox>Last Name</BorderBox>
+        </Col>
+        <Col span={18}>
+          <BorderBox>Email</BorderBox>
+        </Col>
+        <Col span={24}>
+          <BorderBox>Street Address</BorderBox>
+        </Col>
+        <Col span={8}>
+          <BorderBox>City</BorderBox>
+        </Col>
+        <Col span={8}>
+          <BorderBox>State</BorderBox>
+        </Col>
+        <Col span={8}>
+          <BorderBox>Zip Code</BorderBox>
+        </Col>
+      </Row>
+      <Divider>Complex Layout 2</Divider>
+      <Row>
+        <Col span={12}>
+          <BorderBox>First Name</BorderBox>
+        </Col>
+        <Col span={12}>
+          <BorderBox>Last Name</BorderBox>
+        </Col>
+      </Row>
+      <Row>
+        <Col span={18}>
+          <BorderBox>Email</BorderBox>
+        </Col>
+      </Row>
+      <Row>
+        <Col span={4}>
+          <BorderBox>Street Address</BorderBox>
+        </Col>
+      </Row>
+      <Row>
+        <Col span={8}>
+          <BorderBox>City</BorderBox>
+        </Col>
+        <Col span={8}>
+          <BorderBox>State</BorderBox>
+        </Col>
+        <Col span={8}>
+          <BorderBox>Zip Code</BorderBox>
+        </Col>
+      </Row>
     </ComponentDoc>
   </>
 );

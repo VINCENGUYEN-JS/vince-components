@@ -22,9 +22,16 @@ const Col = (props: ColProps) => {
 
   const mergedStyle: React.CSSProperties = {};
 
-  if (gutter) {
-    mergedStyle.paddingLeft = gutter;
-    mergedStyle.paddingRight = gutter;
+  if (gutter && gutter[0] > 0) {
+    const horizontalGutter = gutter[0] / 2;
+    mergedStyle.paddingLeft = horizontalGutter;
+    mergedStyle.paddingRight = horizontalGutter;
+  }
+
+  if (gutter && gutter[1] > 0) {
+    const verticalGutter = gutter[1] / 2;
+    mergedStyle.paddingTop = verticalGutter;
+    mergedStyle.paddingBottom = verticalGutter;
   }
 
   console.log({ classes });

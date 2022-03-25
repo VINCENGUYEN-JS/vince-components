@@ -4,11 +4,12 @@ import classNames from 'classnames';
 import ResponsiveObserve, {
   ScreenMap,
   Breakpoint,
+  responsiveArray,
 } from '../../../../utils/responsiveObserve';
 import './style/index.scss';
 
 interface RowContextState {
-  gutter: number;
+  gutter: [number, number];
 }
 
 export const RowContext = React.createContext<RowContextState>(
@@ -17,9 +18,11 @@ export const RowContext = React.createContext<RowContextState>(
 
 const prefixCls = 'row';
 
+type Gutter = number | Partial<Record<Breakpoint, number>>;
+
 type RowProps = {
   children: React.ReactNode;
-  gutter?: number | Partial<Record<Breakpoint, number>>;
+  gutter?: Gutter | [Gutter, Gutter];
   justify?: 'start' | 'end' | 'center' | 'space-around' | 'space-between';
 };
 
@@ -42,22 +45,24 @@ const Row = (props: RowProps) => {
     return () => ResponsiveObserve.unsubscribe(token);
   }, []);
 
-  const getGutter = React.useCallback((): number => {
-    let result = 0;
-    if (typeof gutter === 'number') {
-      return gutter;
-    }
-
-    if (typeof gutter === 'object') {
-      Object.keys(screens).forEach((breakpoint: Breakpoint) => {
-        if (gutter[breakpoint] !== undefined && screens[breakpoint]) {
-          result = gutter[breakpoint] as number;
+  const getGutter = React.useCallback((): [number, number] => {
+    const results: [number, number] = [0, 0];
+    const normalizedGutter = Array.isArray(gutter) ? gutter : [gutter, 0];
+    normalizedGutter.forEach((g, index) => {
+      if (typeof g === 'object') {
+        for (let i = 0; i < responsiveArray.length; i++) {
+          const breakpoint: Breakpoint = responsiveArray[i];
+          if (screens[breakpoint] && g[breakpoint] !== undefined) {
+            results[index] = g[breakpoint] as number;
+            break;
+          }
         }
-      });
-    }
-
-    return result;
-  }, [screens, gutter]);
+      } else {
+        results[index] = g || 0;
+      }
+    });
+    return results;
+  }, [gutter, screens]);
 
   const classes = classNames(prefixCls, {
     [`${prefixCls}-${justify}`]: justify,
