@@ -15,3 +15,4 @@ export { default as LayoutExample } from './layouts/LayoutExample';
 export { default as SpaceExample } from './layouts/SpaceExample';
 export { default as AlignExample } from './layouts/AlignExample';
 export { default as SplitExample } from './layouts/SplitExample';
+export { default as ColumnsExample } from './layouts/ColumnExample';

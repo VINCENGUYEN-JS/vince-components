@@ -16,6 +16,7 @@ import {
   SpaceExample,
   ModalExample,
   SplitExample,
+  ColumnsExample,
 } from './pages';
 
 export interface CustomRouteObject extends RouteObject {
@@ -92,6 +93,11 @@ const routes: CustomRouteObject[] = [
     key: 'split',
     path: '/split',
     element: <SplitExample />,
+  },
+  {
+    key: 'columns',
+    path: '/columns',
+    element: <ColumnsExample />,
   },
 ];
 

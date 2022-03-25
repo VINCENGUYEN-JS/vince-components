@@ -123,6 +123,27 @@ const splitAPI: APIProps[] = orderAPI([
   },
 ]);
 
+const columnsAPI: APIProps[][] = [
+  [
+    {
+      title: 'Columns',
+      property: 'columns',
+      description: 'The columns of grid',
+      type: 'number',
+      default: '1',
+    },
+  ],
+  [
+    {
+      title: 'Column',
+      property: 'span',
+      description: 'The span of column',
+      type: 'number',
+      default: '1',
+    },
+  ],
+];
+
 const gridAPI: APIProps[][] = [
   [
     {
@@ -310,6 +331,7 @@ const layoutAPI: APIProps[][] = [
 
 export {
   buttonAPI,
+  columnsAPI,
   cardAPI,
   dividerAPI,
   tagAPI,

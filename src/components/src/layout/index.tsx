@@ -4,3 +4,4 @@ export { default as Layout } from './layout';
 export { default as Space } from './space';
 export { default as Align } from './align/Align';
 export { default as Split } from './split';
+export { Column, Columns } from './columns';

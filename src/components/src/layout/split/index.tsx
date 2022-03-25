@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import { spacingMap } from '../spacingMap';
+
 const fractions = {
   '1/4': '1fr 3fr',
   '1/3': '1fr 2fr',
@@ -8,15 +10,6 @@ const fractions = {
   '3/4': '3fr 1fr',
   'auto-start': 'auto 1fr',
   'auto-end': '1fr auto',
-};
-
-const spacingMap = {
-  xs: '0.125rem',
-  sm: '0.25rem',
-  md: '0.5rem',
-  lg: '1rem',
-  xl: '2rem',
-  xxl: '4rem',
 };
 
 type fraction = keyof typeof fractions;
