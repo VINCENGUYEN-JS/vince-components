@@ -26,7 +26,14 @@ const filterFn = (routes: CustomRouteObject[]) => (componentType: string) => {
     ];
     return routes.filter((route) => supportedComponents.includes(route.key));
   } else {
-    const supportedLayouts = ['grid', 'layout', 'space', 'split', 'columns'];
+    const supportedLayouts = [
+      'grid',
+      'layout',
+      'space',
+      'split',
+      'columns',
+      'dynamicgrid',
+    ];
     return routes.filter((route) => supportedLayouts.includes(route.key));
   }
 };

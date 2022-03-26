@@ -17,6 +17,7 @@ import {
   ModalExample,
   SplitExample,
   ColumnsExample,
+  DynamicGridExample,
 } from './pages';
 
 export interface CustomRouteObject extends RouteObject {
@@ -98,6 +99,11 @@ const routes: CustomRouteObject[] = [
     key: 'columns',
     path: '/columns',
     element: <ColumnsExample />,
+  },
+  {
+    key: 'dynamicgrid',
+    path: '/dynamicgrid',
+    element: <DynamicGridExample />,
   },
 ];
 

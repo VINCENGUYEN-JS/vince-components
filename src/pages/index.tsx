@@ -10,6 +10,7 @@ export { default as TagExample } from './components/TagExample';
 export { default as ModalExample } from './components/ModalExample';
 
 //layout pages
+export { default as DynamicGridExample } from './layouts/DynamicGridExample';
 export { default as GridExample } from './layouts/GridExample';
 export { default as LayoutExample } from './layouts/LayoutExample';
 export { default as SpaceExample } from './layouts/SpaceExample';

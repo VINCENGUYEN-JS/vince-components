@@ -15,4 +15,5 @@ export {
   Split,
   Column,
   Columns,
+  DynamicGrid,
 } from './layout';

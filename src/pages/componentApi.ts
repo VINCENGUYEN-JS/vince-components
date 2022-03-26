@@ -46,6 +46,21 @@ const cardAPI: APIProps[] = orderAPI([
   },
 ]);
 
+const dynamicAPI: APIProps[] = orderAPI([
+  {
+    property: 'minWidth',
+    description: 'minWidth of the grid column',
+    type: 'string',
+    default: '320px',
+  },
+  {
+    property: 'gutter',
+    description: 'gutter of the grid column',
+    type: 'xs | sm | md | lg | xl | xxl',
+    default: 'lg',
+  },
+]);
+
 const dividerAPI: APIProps[] = orderAPI([
   {
     property: 'children',
@@ -333,6 +348,7 @@ export {
   buttonAPI,
   columnsAPI,
   cardAPI,
+  dynamicAPI,
   dividerAPI,
   tagAPI,
   resultAPI,
