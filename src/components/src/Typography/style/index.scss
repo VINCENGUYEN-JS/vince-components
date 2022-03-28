@@ -1,0 +1,10 @@
+@use '../../style/variable.scss' as *;
+@use '../../style/mixins.scss' as *;
+
+.typography#important {
+  color: $text-color;
+  overflow-wrap: break-word;
+  h1 {
+    @include typography-title-1();
+  }
+}

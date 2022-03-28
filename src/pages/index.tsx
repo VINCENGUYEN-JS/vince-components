@@ -8,6 +8,7 @@ export { default as ResultExample } from './components/ResultExample';
 export { default as CardExample } from './components/CardExample';
 export { default as TagExample } from './components/TagExample';
 export { default as ModalExample } from './components/ModalExample';
+export { default as TypographyExample } from './components/TypographyExample';
 
 //layout pages
 export { default as DynamicGridExample } from './layouts/DynamicGridExample';

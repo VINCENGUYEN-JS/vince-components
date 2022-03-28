@@ -6,6 +6,7 @@ export { default as Menu } from './Menu';
 export { default as Modal } from './Modal';
 export { default as Result } from './Result';
 export { default as Tag } from './Tag';
+export { default as Typography } from './Typography';
 export {
   Align,
   Row,

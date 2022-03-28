@@ -23,6 +23,7 @@ const filterFn = (routes: CustomRouteObject[]) => (componentType: string) => {
       'result',
       'tag',
       'modal',
+      'typography',
     ];
     return routes.filter((route) => supportedComponents.includes(route.key));
   } else {

@@ -1,0 +1,25 @@
+@use './variable.scss' as *;
+
+@mixin typography-title(
+  $fontSize,
+  $fontWeight,
+  $lineHeight,
+  $headingColor,
+  $headingMarginBottom
+) {
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+  color: $headingColor;
+  margin-bottom: $headingMarginBottom;
+}
+
+@mixin typography-title-1 {
+  @include typography-title(
+    $heading-1-size,
+    $typography-title-font-weight,
+    1.23,
+    $heading-color,
+    $typography-title-margin-bottom
+  );
+}
