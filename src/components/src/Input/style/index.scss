@@ -1,0 +1,17 @@
+@use '../../style/variable.scss' as *;
+@use '../../style/reset.scss' as *;
+@use './mixin.scss' as *;
+
+.input {
+  @include reset-component();
+  @include input();
+  &-group {
+    @include input-group();
+    &-wrapper {
+      display: inline-block;
+      width: 100%;
+      text-align: start;
+      vertical-align: top;
+    }
+  }
+}

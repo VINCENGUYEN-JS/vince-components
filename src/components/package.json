@@ -1,0 +1,51 @@
+{
+  "name": "vince-components",
+  "version": "1.0.5",
+  "description": "Simple components library",
+  "module": "./lib/esm/components/src/index.js",
+  "main": "./lib/cjs/components/src/index.js",
+  "keywords": [
+    "vince",
+    "components",
+    "design",
+    "framework",
+    "frontend",
+    "react",
+    "react-component",
+    "ui"
+  ],
+  "files": [
+    "lib/"
+  ],
+  "homepage": "https://VINCENGUYEN-JS.github.io/component-ants",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VINCENGUYEN-JS/component-ants"
+  },
+  "scripts": {
+    "clean": "rimraf lib",
+    "copy-files": "copyfiles -e **/*.ts -e **/*.tsx -u 1 src/**/*.scss lib/esm/components/src",
+    "tsc": "npm run clean && tsc -p tsconfig.json && tsc -p tsconfig-cjs.json && npm run copy-files",
+    "format-code": "../../node_modules/.bin/prettier --single-quote --write \"src/**/*.{js,ts,jsx,tsx}\""
+  },
+  "author": "VINCE-NGUYEN",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^17.0.40",
+    "css-loader": "^6.7.1",
+    "react": "^17.0.2",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.2.8",
+    "typescript": "^4.6.2"
+  },
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "classnames": "^2.3.1",
+    "rc-util": "^5.19.3"
+  }
+}

@@ -1,0 +1,19 @@
+@use '../../../style/variable.scss' as *;
+
+@mixin loop-grid-columns() {
+  $count: 0;
+  @while $count <= $grid-columns {
+    .col-#{$count} {
+      display: block;
+      flex: 0 0 percentage(($count/$grid-columns));
+    }
+    $count: $count + 1;
+    .col-offset-#{$count} {
+      margin-left: percentage(($count/$grid-columns));
+    }
+  }
+}
+
+@mixin make-grid() {
+  @include loop-grid-columns();
+}
