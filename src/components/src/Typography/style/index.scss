@@ -7,4 +7,13 @@
   h1 {
     @include typography-title-1();
   }
+  h2 {
+    @include typography-title-2();
+  }
+  h3 {
+    @include typography-title-3();
+  }
+  h4 {
+    @include typography-title-4();
+  }
 }
