@@ -8,15 +8,15 @@ export interface TypographyProps {
 
 interface InternalTypographyProps extends TypographyProps {
   component?: string;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
-const prefixCls = 'typography';
-
 const Typography = (props: InternalTypographyProps) => {
-  const { component = 'article', children } = props;
+  const { component = 'article', children, className, style } = props;
   const Component = component as any;
   return (
-    <Component className={prefixCls} id="important">
+    <Component style={style} className={className} id="important">
       {children}
     </Component>
   );

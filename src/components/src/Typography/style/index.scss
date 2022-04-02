@@ -1,7 +1,7 @@
 @use '../../style/variable.scss' as *;
 @use '../../style/mixins.scss' as *;
 
-.typography#important {
+#important {
   color: $text-color;
   overflow-wrap: break-word;
   h1 {
@@ -15,5 +15,17 @@
   }
   h4 {
     @include typography-title-4();
+  }
+}
+
+// ============ Ellipsis ============
+
+.typography {
+  &-single-line {
+    white-space: nowrap;
+  }
+  &-ellipsis-single-line {
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
