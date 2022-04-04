@@ -34,8 +34,6 @@ const Col = (props: ColProps) => {
     mergedStyle.paddingBottom = verticalGutter;
   }
 
-  console.log({ classes });
-
   return (
     <div className={classes} style={{ ...mergedStyle }}>
       {children}

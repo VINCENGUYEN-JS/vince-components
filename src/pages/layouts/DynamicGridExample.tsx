@@ -68,7 +68,7 @@ const DynamicGridExample = () => {
   return (
     <ComponentDoc
       title="Dynamic Grid"
-      introduction="The Grid primitive and its responsive-by-default layout makes building web pages for multiple screens so much easier."
+      introduction="The Grid primitive and its responsive-by-default layout makes building web pages for multiple screens so much easier .Magic repeat(auto-fit, minmax(320px, 1fr))"
       code={dynamicGridCode}
       api={dynamicAPI}
     >

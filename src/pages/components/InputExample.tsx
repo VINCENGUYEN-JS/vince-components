@@ -6,7 +6,9 @@ import { inputAPI } from '../componentApi';
 
 const inputCode = `<Input placeholder="Basic Usage" />
 <Input placeholder="Basic Usage" addonAfter=".com" addonBefore="https://" />
-<Input.Search onSearch={onSearch} onChange={onChange} placeholder="Search something">`;
+<Input.Search onSearch={onSearch} onChange={onChange} placeholder="Search something">
+<Input.Search onSearch={onSearch} enterButton="Search" onChange={onChange}
+placeholder="Search something" />`;
 
 const InputExample = () => {
   const onChange = (value: any) => console.log(value);
@@ -30,11 +32,19 @@ const InputExample = () => {
           />
         </Space>
         <Divider orientation="left">Input Search</Divider>
-        <Input.Search
-          onSearch={onSearch}
-          onChange={onChange}
-          placeholder="Search something"
-        />
+        <Space direction="vertical">
+          <Input.Search
+            onSearch={onSearch}
+            onChange={onChange}
+            placeholder="Search something"
+          />
+          <Input.Search
+            onSearch={onSearch}
+            enterButton="Search"
+            onChange={onChange}
+            placeholder="Search something"
+          />
+        </Space>
       </ComponentDoc>
     </>
   );

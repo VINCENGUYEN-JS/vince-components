@@ -1,7 +1,14 @@
+@use '../../style/variable.scss' as *;
+
 .input-search {
   .input-group-addon:last-child {
     left: -1px;
     padding: 0;
     border: 0;
+    .input-search-button {
+      padding-top: 0;
+      padding-bottom: 0;
+      border-radius: 0 $border-radius-base $border-radius-base 0;
+    }
   }
 }

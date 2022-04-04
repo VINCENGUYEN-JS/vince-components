@@ -15,13 +15,18 @@ const Search = (props: SearchProps) => {
   const { onSearch: customOnSearch, enterButton = false, ...rest } = props;
   const searchIcon =
     typeof enterButton === 'boolean' ? <SearchOutlined /> : null;
+  const btnClassName = `${prefixCls}-button`;
   const onSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (customOnSearch) {
       customOnSearch((e.target as HTMLInputElement).value, e);
     }
   };
   const button = (
-    <Button type={enterButton ? 'primary' : undefined} icon={searchIcon}>
+    <Button
+      type={enterButton ? 'primary' : undefined}
+      icon={searchIcon}
+      className={btnClassName}
+    >
       {enterButton}
     </Button>
   );
